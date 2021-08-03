@@ -102,15 +102,16 @@
                                 <li>
                                     <a href="programs.html">Programs</a>
                                     <ul class="sub-menu">
-                                        <li>
-                                            <a href="#">Industrial Automations</a>
-                                            <ul class="sub-menu">
-                                                <li><a href="industrial-automation-and -plcs-programming.html">Industrial
-                                                        Automation & PLCs Programming</a></li>
-                                                <li><a href="blog-left-sidebar.html">Instrumentation</a></li>
-                                                <li><a href="blog-right-sidebar.html">Internet of things</a></li>
+                                        <li v-for="cat in categories" :key="cat.id">
+                                            <a href="#">{{cat.name}}</a>
+                                            <ul class="sub-menu" v-if="searchProductToDisplay(cat.name).length">
+                                                <li v-for="sub in searchProductToDisplay(cat.name)" :key="sub.id" @click="setId(sub)">
+                                                    <a href="courses-details.html">{{sub.course_name}}</a>
+                                                </li>
+                                                <!-- <li><a href="blog-left-sidebar.html">Instrumentation</a></li>
+                                                <li><a href="blog-right-sidebar.html">Internet of things</a></li> -->
                                             </ul>
-                                        </li>
+                                            <!-- </li>
                                         <li>
                                             <a href="#">Programming</a>
                                             <ul class="sub-menu">
@@ -137,12 +138,12 @@
                                                 <li><a href="blog-details-right-sidebar.html">Mobile Apps
                                                         Development</a></li>
                                             </ul>
-                                        </li>
+                                        </li> -->
                                     </ul>
-                                </li>
-                                <li>
-                                    <a href="about.html">About Us </a>
-                                    <!-- <ul class="sub-menu">
+                                    </li>
+                                    <li>
+                                        <a href="about.html">About Us </a>
+                                        <!-- <ul class="sub-menu">
                                         <li><a href="about.html">About</a></li>
                                         <li><a href="register.html">Register</a></li>
                                         <li><a href="login.html">Login</a></li>
@@ -157,18 +158,18 @@
                                         <li><a href="traffic-conversion.html">Traffic & conversion</a></li>
                                         <li><a href="messages.html">Messages</a></li>
                                     </ul> -->
-                                </li>
-                                <li>
-                                    <a href="about.html">Partnerships </a>
-                                    <ul class="sub-menu">
-                                        <li><a href="for-government.html">For Government</a></li>
-                                        <li><a href="for-universities.html">For Universities</a></li>
-                                        <li><a href="for-enterprise.html">For Enterprises</a></li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <a href="#">Blog</a>
-                                    <!-- <ul class="sub-menu">
+                                    </li>
+                                    <li>
+                                        <a href="about.html">Partnerships </a>
+                                        <ul class="sub-menu">
+                                            <li><a href="for-government.html">For Government</a></li>
+                                            <li><a href="for-universities.html">For Universities</a></li>
+                                            <li><a href="for-enterprise.html">For Enterprises</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="#">Blog</a>
+                                        <!-- <ul class="sub-menu">
                                         <li>
                                             <a href="#">Blog</a>
                                             <ul class="sub-menu">
@@ -186,8 +187,8 @@
                                         </li>
                                     </ul> -->
 
-                                </li>
-                                <!-- <li><a href="contact.html">Contact</a></li> -->
+                                    </li>
+                                    <!-- <li><a href="contact.html">Contact</a></li> -->
                             </ul>
 
                         </div>
@@ -1098,6 +1099,103 @@
             data: {
                 message: 'Hello Vue!',
                 spinner: false,
+                original_courses: [
+
+                    {
+                        id: 1,
+                        course_img: 'assets/images/courses/courses-01.jpg',
+                        author_name: 'Williams Jason',
+                        author_image: 'assets/images/author/author-01.jpg',
+                        course_category: 'Industrial Automation',
+                        course_name: 'Data Science and Machine Learning with Python - Hands On!',
+                        course_time: '6 months',
+                        course_lectures: '29',
+                        course_sales_price: 400.00,
+                        course_old_price: 600.00,
+                        course_rating: 4.9,
+                        certificate: 'yes',
+                        language: 'English',
+                        level: 'Secondary'
+                    },
+
+                    {
+                        id: 2,
+                        course_img: 'assets/images/courses/courses-02.jpg',
+                        author_name: 'Williams Jason',
+                        author_image: 'assets/images/author/author-02.jpg',
+                        course_category: 'Industrial Automation',
+                        course_name: 'Create Amazing Color Schemes for Your UX Design Projects!',
+                        course_time: '6 months',
+                        course_lectures: '29',
+                        course_sales_price: 400.00,
+                        course_old_price: 600.00,
+                        course_rating: 4.9,
+                        certificate: 'yes',
+                        language: 'English',
+                        level: 'Secondary'
+                    }, {
+                        id: 3,
+                        course_img: 'assets/images/courses/courses-03.jpg',
+                        author_name: 'Williams Jason',
+                        author_image: 'assets/images/author/author-03.jpg',
+                        course_category: 'Industrial Automation',
+                        course_name: 'Culture & Leadership: Strategies for a Successful Business!',
+                        course_time: '6 months',
+                        course_lectures: '29',
+                        course_sales_price: 400.00,
+                        course_old_price: 600.00,
+                        course_rating: 4.9,
+                        certificate: 'yes',
+                        language: 'English',
+                        level: 'Secondary'
+                    }, {
+                        id: 4,
+                        course_img: 'assets/images/courses/courses-02.jpg',
+                        author_name: 'Williams Jason',
+                        author_image: 'assets/images/author/author-02.jpg',
+                        course_category: 'Programming',
+                        course_name: 'Data Science and Machine Learning with Python - Hands On!',
+                        course_time: '6 months',
+                        course_lectures: '29',
+                        course_sales_price: 400.00,
+                        course_old_price: 600.00,
+                        course_rating: 4.9,
+                        certificate: 'yes',
+                        language: 'English',
+                        level: 'Secondary'
+                    }, {
+                        id: 5,
+                        course_img: 'assets/images/courses/courses-01.jpg',
+                        author_name: 'Olu Head',
+                        author_image: 'assets/images/author/author-01.jpg',
+                        course_category: 'Programming',
+                        course_name: 'Create Amazing Color Schemes for Your UX Design Projects!',
+                        course_time: '6 months',
+                        course_lectures: '22',
+                        course_sales_price: 400.00,
+                        course_old_price: 600.00,
+                        course_rating: 4.9,
+                        certificate: 'yes',
+                        language: 'English',
+                        level: 'Secondary'
+                    }, {
+                        id: 6,
+                        course_img: 'assets/images/courses/courses-03.jpg',
+                        author_name: 'Mrs Imade',
+                        author_image: 'assets/images/author/author-03.jpg',
+                        course_category: 'Programming',
+                        course_name: 'Culture & Leadership: Strategies for a Successful Business!',
+                        course_time: '6 months',
+                        course_lectures: '25',
+                        course_sales_price: 400.00,
+                        course_old_price: 600.00,
+                        course_rating: 4.9,
+                        certificate: 'yes',
+                        language: 'English',
+                        level: 'Secondary'
+                    },
+
+                ],
                 categories: [{
                     name: 'Industrial Automation',
                     id: '1',
@@ -1122,6 +1220,10 @@
 
             },
             methods: {
+                searchProductToDisplay(value) {
+                    let found = this.original_courses.filter(course => course.course_category == value)
+                    return found
+                },
                 search() {
                     let data = localStorage.getItem('courses') ? JSON.parse(localStorage.getItem('courses')) : ''
                     let course = localStorage.getItem('course') ? JSON.parse(localStorage.getItem('course')) : ''

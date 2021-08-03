@@ -26,7 +26,8 @@
     <link rel="stylesheet" href="assets/css/plugins/nice-select.css">
     <link rel="stylesheet" href="assets/css/plugins/apexcharts.css">
     <link rel="stylesheet" href="assets/css/plugins/jqvmap.min.css">
-
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <!-- Main Style CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
 
@@ -39,7 +40,7 @@
 
 <body>
 
-    <div class="main-wrapper">
+    <div class="main-wrapper" id="app">
 
 
         <!-- Header Section Start -->
@@ -86,132 +87,186 @@
             <!-- Header Top End -->
 
             <!-- Header Main Start -->
-            <div class="header-main">
-                <div class="container">
+            <div class="header-section">
 
-                    <!-- Header Main Start -->
-                    <div class="header-main-wrapper">
+                <!-- Header Top Start -->
+                <div class="header-top d-none d-lg-block">
+                    <div class="container">
 
-                        <!-- Header Logo Start -->
-                        <div class="header-logo">
-                            <a href="index.html"><img src="assets/images/logo.png" alt="Logo"></a>
-                        </div>
-                        <!-- Header Logo End -->
+                        <!-- Header Top Wrapper Start -->
+                        <div class="header-top-wrapper">
 
-                        <!-- Header Menu Start -->
-                        <div class="header-menu d-none d-lg-block">
-                            <ul class="nav-menu">
-                                <li><a href="index.html">Home</a></li>
-                                <li>
-                                    <a href="programs.html">Programs</a>
-                                    <ul class="sub-menu">
-                                        <li>
-                                            <a href="#">Industrial Automations</a>
-                                            <ul class="sub-menu">
-                                                <li><a href="industrial-automation-and -plcs-programming.html">Industrial Automation & PLCs Programming</a></li>
-                                                <li><a href="blog-left-sidebar.html">Instrumentation</a></li>
-                                                <li><a href="blog-right-sidebar.html">Internet of things</a></li>
-                                            </ul>
-                                        </li>
-                                        <li>
-                                            <a href="#">Programming</a>
-                                            <ul class="sub-menu">
-                                                <li><a href="fullstack-web-programming.html">Full Stack Web Development</a></li>
-                                                <li><a href="blog-details-right-sidebar.html">Mobile Apps Development</a></li>
-                                            </ul>
-                                        </li>
-                                        <li>
-                                            <a href="#">Data Science</a>
-                                            <ul class="sub-menu">
-                                                <li><a href="blog-details-left-sidebar.html">Full Stack Web Development</a></li>
-                                                <li><a href="blog-details-right-sidebar.html">Mobile Apps Development</a></li>
-                                            </ul>
-                                        </li>
-                                        <li>
-                                            <a href="#">Cyber Security</a>
-                                            <ul class="sub-menu">
-                                                <li><a href="blog-details-left-sidebar.html">Full Stack Web Development</a></li>
-                                                <li><a href="blog-details-right-sidebar.html">Mobile Apps Development</a></li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <a href="about.html">About Us </a>
-                                    <!-- <ul class="sub-menu">
-                                        <li><a href="about.html">About</a></li>
-                                        <li><a href="register.html">Register</a></li>
-                                        <li><a href="login.html">Login</a></li>
-                                        <li><a href="faq.html">FAQ</a></li>
-                                        <li><a href="404-error.html">404 Error</a></li>
-                                        <li><a href="after-enroll.html">After Enroll</a></li>
-                                        <li><a href="courses-admin.html">Instructor Dashboard (Course List)</a></li>
-                                        <li><a href="overview.html">Instructor Dashboard (Performance)</a></li>
-                                        <li><a href="students.html">Students</a></li>
-                                        <li><a href="reviews.html">Reviews</a></li>
-                                        <li><a href="engagement.html">Course engagement</a></li>
-                                        <li><a href="traffic-conversion.html">Traffic & conversion</a></li>
-                                        <li><a href="messages.html">Messages</a></li>
-                                    </ul> -->
-                                </li>
-                                <li>
-                                    <a href="about.html">Partnerships </a>
-                                    <ul class="sub-menu">
-                                        <li><a href="for-government.html">For Government</a></li>
-                                        <li><a href="for-universities.html">For Universities</a></li>
-                                        <li><a href="for-enterprise.html">For Enterprises</a></li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <a href="#">Blog</a>
-                                    <!-- <ul class="sub-menu">
-                                        <li>
-                                            <a href="#">Blog</a>
-                                            <ul class="sub-menu">
-                                                <li><a href="blog-grid.html">Blog</a></li>
-                                                <li><a href="blog-left-sidebar.html">Blog Left Sidebar</a></li>
-                                                <li><a href="blog-right-sidebar.html">Blog Right Sidebar</a></li>
-                                            </ul>
-                                        </li>
-                                        <li>
-                                            <a href="#">Blog Details</a>
-                                            <ul class="sub-menu">
-                                                <li><a href="blog-details-left-sidebar.html">Blog Details Left Sidebar</a></li>
-                                                <li><a href="blog-details-right-sidebar.html">Blog Details Right Sidebar</a></li>
-                                            </ul>
-                                        </li>
-                                    </ul> -->
+                            <!-- Header Top Left Start -->
+                            <!-- <div class="header-top-left">
+                                <p>All course 28% off for <a href="#">Liberian people’s.</a></p>
+                            </div> -->
+                            <!-- Header Top Left End -->
 
-                                </li>
-                                <!-- <li><a href="contact.html">Contact</a></li> -->
-                            </ul>
+                            <!-- Header Top Medal Start -->
+                            <!-- <div class="header-top-medal">
+                                <div class="top-info">
+                                    <p><i class="flaticon-phone-call"></i> <a href="tel:9702621413">(970) 262-1413</a></p>
+                                    <p><i class="flaticon-email"></i> <a href="mailto:address@gmail.com">address@gmail.com</a></p>
+                                </div>
+                            </div> -->
+                            <!-- Header Top Medal End -->
+
+                            <!-- Header Top Right Start -->
+                            <!-- <div class="header-top-right">
+                                <ul class="social">
+                                    <li><a href="#"><i class="flaticon-facebook"></i></a></li>
+                                    <li><a href="#"><i class="flaticon-twitter"></i></a></li>
+                                    <li><a href="#"><i class="flaticon-skype"></i></a></li>
+                                    <li><a href="#"><i class="flaticon-instagram"></i></a></li>
+                                </ul>
+                            </div> -->
+                            <!-- Header Top Right End -->
 
                         </div>
-                        <!-- Header Menu End -->
-
-                        <!-- Header Sing In & Up Start -->
-                        <!-- <div class="header-sign-in-up d-none d-lg-block">
-                            <ul>
-                                <li><a class="sign-in" href="login.html">Sign In</a></li>
-                                <li><a class="sign-up" href="register.html">Sign Up</a></li>
-                            </ul>
-                        </div> -->
-                        <!-- Header Sing In & Up End -->
-
-                        <!-- Header Mobile Toggle Start -->
-                        <div class="header-toggle d-lg-none">
-                            <a class="menu-toggle" href="javascript:void(0)">
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                            </a>
-                        </div>
-                        <!-- Header Mobile Toggle End -->
+                        <!-- Header Top Wrapper End -->
 
                     </div>
-                    <!-- Header Main End -->
-
                 </div>
+                <!-- Header Top End -->
+
+                <!-- Header Main Start -->
+                <div class="header-main">
+                    <div class="container">
+
+                        <!-- Header Main Start -->
+                        <div class="header-main-wrapper">
+
+                            <!-- Header Logo Start -->
+                            <div class="header-logo">
+                                <a href="index.html"><img src="assets/images/logo.png" alt="Logo"></a>
+                            </div>
+                            <!-- Header Logo End -->
+
+                            <!-- Header Menu Start -->
+                            <div class="header-menu d-none d-lg-block">
+                                <ul class="nav-menu">
+                                    <li><a href="index.html">Home</a></li>
+                                    <li>
+                                        <a href="programs.html">Programs</a>
+                                        <ul class="sub-menu">
+                                            <li v-for="cat in categories" :key="cat.id">
+                                                <a href="#">{{cat.name}}</a>
+                                                <ul class="sub-menu" v-if="searchProductToDisplay(cat.name).length">
+                                                    <li v-for="sub in searchProductToDisplay(cat.name)" :key="sub.id" @click="setId(sub)">
+                                                        <a href="courses-details.html">{{sub.course_name}}</a>
+                                                    </li>
+                                                    <!-- <li><a href="blog-left-sidebar.html">Instrumentation</a></li>
+                                                    <li><a href="blog-right-sidebar.html">Internet of things</a></li> -->
+                                                </ul>
+                                                <!-- </li>
+                                            <li>
+                                                <a href="#">Programming</a>
+                                                <ul class="sub-menu">
+                                                    <li><a href="fullstack-web-programming.html">Full Stack Web
+                                                            Development</a></li>
+                                                    <li><a href="blog-details-right-sidebar.html">Mobile Apps
+                                                            Development</a></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a href="#">Data Science</a>
+                                                <ul class="sub-menu">
+                                                    <li><a href="blog-details-left-sidebar.html">Full Stack Web
+                                                            Development</a></li>
+                                                    <li><a href="blog-details-right-sidebar.html">Mobile Apps
+                                                            Development</a></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a href="#">Cyber Security</a>
+                                                <ul class="sub-menu">
+                                                    <li><a href="blog-details-left-sidebar.html">Full Stack Web
+                                                            Development</a></li>
+                                                    <li><a href="blog-details-right-sidebar.html">Mobile Apps
+                                                            Development</a></li>
+                                                </ul>
+                                            </li> -->
+                                        </ul>
+                                        </li>
+                                        <li>
+                                            <a href="about.html">About Us </a>
+                                            <!-- <ul class="sub-menu">
+                                            <li><a href="about.html">About</a></li>
+                                            <li><a href="register.html">Register</a></li>
+                                            <li><a href="login.html">Login</a></li>
+                                            <li><a href="faq.html">FAQ</a></li>
+                                            <li><a href="404-error.html">404 Error</a></li>
+                                            <li><a href="after-enroll.html">After Enroll</a></li>
+                                            <li><a href="courses-admin.html">Instructor Dashboard (Course List)</a></li>
+                                            <li><a href="overview.html">Instructor Dashboard (Performance)</a></li>
+                                            <li><a href="students.html">Students</a></li>
+                                            <li><a href="reviews.html">Reviews</a></li>
+                                            <li><a href="engagement.html">Course engagement</a></li>
+                                            <li><a href="traffic-conversion.html">Traffic & conversion</a></li>
+                                            <li><a href="messages.html">Messages</a></li>
+                                        </ul> -->
+                                        </li>
+                                        <li>
+                                            <a href="about.html">Partnerships </a>
+                                            <ul class="sub-menu">
+                                                <li><a href="for-government.html">For Government</a></li>
+                                                <li><a href="for-universities.html">For Universities</a></li>
+                                                <li><a href="for-enterprise.html">For Enterprises</a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="#">Blog</a>
+                                            <!-- <ul class="sub-menu">
+                                            <li>
+                                                <a href="#">Blog</a>
+                                                <ul class="sub-menu">
+                                                    <li><a href="blog-grid.html">Blog</a></li>
+                                                    <li><a href="blog-left-sidebar.html">Blog Left Sidebar</a></li>
+                                                    <li><a href="blog-right-sidebar.html">Blog Right Sidebar</a></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a href="#">Blog Details</a>
+                                                <ul class="sub-menu">
+                                                    <li><a href="blog-details-left-sidebar.html">Blog Details Left Sidebar</a></li>
+                                                    <li><a href="blog-details-right-sidebar.html">Blog Details Right Sidebar</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul> -->
+
+                                        </li>
+                                        <!-- <li><a href="contact.html">Contact</a></li> -->
+                                </ul>
+
+                            </div>
+                            <!-- Header Menu End -->
+
+                            <!-- Header Sing In & Up Start -->
+                            <!-- <div class="header-sign-in-up d-none d-lg-block">
+                                <ul>
+                                    <li><a class="sign-in" href="login.html">Sign In</a></li>
+                                    <li><a class="sign-up" href="register.html">Sign Up</a></li>
+                                </ul>
+                            </div> -->
+                            <!-- Header Sing In & Up End -->
+
+                            <!-- Header Mobile Toggle Start -->
+                            <div class="header-toggle d-lg-none">
+                                <a class="menu-toggle" href="javascript:void(0)">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </a>
+                            </div>
+                            <!-- Header Mobile Toggle End -->
+
+                        </div>
+                        <!-- Header Main End -->
+
+                    </div>
+                </div>
+                <!-- Header Main End -->
+
             </div>
             <!-- Header Main End -->
 
@@ -1145,7 +1200,159 @@
 
 
 
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js "></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js "></script>
+    <script>
+        let app = new Vue({
+            el: '#app',
+            // mounted() {
+            //     this.search()
+            // },
+            data: {
+                message: 'Hello Vue!',
+                spinner: false,
+                categories: [{
+                    name: 'Industrial Automation',
+                    id: '1',
+                }, {
+                    name: 'Programming',
+                    id: '2',
+                }, {
+                    name: 'Data Science',
+                    id: '3',
+                }, {
+                    name: 'Cyber Security',
+                    id: '4',
+                }, {
+                    name: 'Financial',
+                    id: '5',
+                }, {
+                    name: 'Marketing',
+                    id: '6',
+                }],
+                courses: [],
+                original_courses: [
 
+                    {
+                        id: 1,
+                        course_img: 'assets/images/courses/courses-01.jpg',
+                        author_name: 'Williams Jason',
+                        author_image: 'assets/images/author/author-01.jpg',
+                        course_category: 'Industrial Automation',
+                        course_name: 'Data Science and Machine Learning with Python - Hands On!',
+                        course_time: '6 months',
+                        course_lectures: '29',
+                        course_sales_price: 400.00,
+                        course_old_price: 600.00,
+                        course_rating: 4.9,
+                        certificate: 'yes',
+                        language: 'English',
+                        level: 'Secondary'
+                    },
+
+                    {
+                        id: 2,
+                        course_img: 'assets/images/courses/courses-02.jpg',
+                        author_name: 'Williams Jason',
+                        author_image: 'assets/images/author/author-02.jpg',
+                        course_category: 'Industrial Automation',
+                        course_name: 'Create Amazing Color Schemes for Your UX Design Projects!',
+                        course_time: '6 months',
+                        course_lectures: '29',
+                        course_sales_price: 400.00,
+                        course_old_price: 600.00,
+                        course_rating: 4.9,
+                        certificate: 'yes',
+                        language: 'English',
+                        level: 'Secondary'
+                    }, {
+                        id: 3,
+                        course_img: 'assets/images/courses/courses-03.jpg',
+                        author_name: 'Williams Jason',
+                        author_image: 'assets/images/author/author-03.jpg',
+                        course_category: 'Industrial Automation',
+                        course_name: 'Culture & Leadership: Strategies for a Successful Business!',
+                        course_time: '6 months',
+                        course_lectures: '29',
+                        course_sales_price: 400.00,
+                        course_old_price: 600.00,
+                        course_rating: 4.9,
+                        certificate: 'yes',
+                        language: 'English',
+                        level: 'Secondary'
+                    }, {
+                        id: 4,
+                        course_img: 'assets/images/courses/courses-02.jpg',
+                        author_name: 'Williams Jason',
+                        author_image: 'assets/images/author/author-02.jpg',
+                        course_category: 'Programming',
+                        course_name: 'Data Science and Machine Learning with Python - Hands On!',
+                        course_time: '6 months',
+                        course_lectures: '29',
+                        course_sales_price: 400.00,
+                        course_old_price: 600.00,
+                        course_rating: 4.9,
+                        certificate: 'yes',
+                        language: 'English',
+                        level: 'Secondary'
+                    }, {
+                        id: 5,
+                        course_img: 'assets/images/courses/courses-01.jpg',
+                        author_name: 'Olu Head',
+                        author_image: 'assets/images/author/author-01.jpg',
+                        course_category: 'Programming',
+                        course_name: 'Create Amazing Color Schemes for Your UX Design Projects!',
+                        course_time: '6 months',
+                        course_lectures: '22',
+                        course_sales_price: 400.00,
+                        course_old_price: 600.00,
+                        course_rating: 4.9,
+                        certificate: 'yes',
+                        language: 'English',
+                        level: 'Secondary'
+                    }, {
+                        id: 6,
+                        course_img: 'assets/images/courses/courses-03.jpg',
+                        author_name: 'Mrs Imade',
+                        author_image: 'assets/images/author/author-03.jpg',
+                        course_category: 'Programming',
+                        course_name: 'Culture & Leadership: Strategies for a Successful Business!',
+                        course_time: '6 months',
+                        course_lectures: '25',
+                        course_sales_price: 400.00,
+                        course_old_price: 600.00,
+                        course_rating: 4.9,
+                        certificate: 'yes',
+                        language: 'English',
+                        level: 'Secondary'
+                    },
+
+                ]
+            },
+            methods: {
+                searchProductToDisplay(value) {
+                    let found = this.original_courses.filter(course => course.course_category == value)
+                    return found
+                },
+                search(value) {
+                    if (value) {
+                        let found = this.original_courses.filter(course => course.course_category == value.name)
+                        this.courses = found
+                    } else {
+                        let found = this.original_courses.filter(course => course.course_category == this.categories[0].name)
+                        this.courses = found
+                    }
+                },
+                setCourses() {
+                    localStorage.setItem('courses', JSON.stringify(this.original_courses))
+                    localStorage.setItem('categories', JSON.stringify(this.categories))
+                },
+                setId(course) {
+                    localStorage.setItem('course', JSON.stringify(course))
+                }
+            },
+        })
+    </script>
 
     <!-- JS
     ============================================ -->

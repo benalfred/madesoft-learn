@@ -379,7 +379,7 @@
                     <h4 class="sub-title">Transform your life in six months</h4>
                     <h2 class="main-title">launch your careers in Engineering and<span> Technology.</span></h2>
                     <p>Madesoft prepares students for fulfilling careers in engineering, software development and other careers in the tech space.</p>
-                    <a class="btn btn-primary btn-hover-dark" href="#">Start A Course</a>
+                    <a class="btn btn-primary btn-hover-dark" href="programs.html">Start A Course</a>
                 </div>
                 <!-- Slider Content End -->
 
@@ -750,7 +750,7 @@
 
             <!-- All Courses BUtton Start -->
             <div class="courses-btn text-center ">
-                <a href="courses.html" class="btn btn-secondary btn-hover-primary ">Other Course</a>
+                <a href="programs.html" class="btn btn-secondary btn-hover-primary ">Other Course</a>
             </div>
             <!-- All Courses BUtton End -->
 
@@ -1538,10 +1538,24 @@
                 search(value) {
                     if (value) {
                         let found = this.original_courses.filter(course => course.course_category == value.name)
-                        this.courses = found
+                        this.courses = []
+                        if (found.length) {
+                            found.forEach(c => {
+                                if (this.courses.length != 6 && this.courses.length < 6) {
+                                    this.courses.push(c)
+                                }
+                            })
+                        }
                     } else {
                         let found = this.original_courses.filter(course => course.course_category == this.categories[0].name)
-                        this.courses = found
+                        this.courses = []
+                        if (found.length) {
+                            found.forEach(c => {
+                                if (this.courses.length != 6 && this.courses.length < 6) {
+                                    this.courses.push(c)
+                                }
+                            })
+                        }
                     }
                 },
                 setCourses() {
