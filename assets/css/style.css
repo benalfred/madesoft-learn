@@ -17259,7 +17259,7 @@ only screen and (max-width: 767px) {
 
 .header-menu .sub-menu {
     position: absolute;
-    width: 225px;
+    width: 280px;
     background-color: #fff;
     border-top: 2px solid #212832;
     padding: 10px 0px;
@@ -19010,13 +19010,13 @@ only screen and (min-width: 1200px) and (max-width: 1599px) {
 }
 
 .courses-tabs-menu .nav li button {
-    width: 100%;
+    width: 105%;
     height: 60px;
     border: 1px solid rgba(48, 146, 85, 0.2);
     border-radius: 10px;
     background-color: #fff;
     color: #212832;
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 500;
     -webkit-transition: all 0.3s ease 0s;
     -o-transition: all 0.3s ease 0s;
