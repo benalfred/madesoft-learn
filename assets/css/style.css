@@ -20755,11 +20755,11 @@ only screen and (max-width: 767px) {
 }
 
 .page-banner-content .title {
-    font-size: 40px;
+    font-size: 30px;
     font-weight: 500;
     margin-bottom: 0;
     margin-top: 15px;
-    padding-bottom: 15px;
+    padding-bottom: 5px;
     line-height: 1.6;
 }
 

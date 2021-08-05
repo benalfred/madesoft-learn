@@ -10,6 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Favicon -->
     <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.ico">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <!-- CSS
 	============================================ -->
@@ -458,7 +459,7 @@
                         <!---All Courses Wrapper Start -->
                         <div class="courses-wrapper">
                             <div class="row">
-                                <div class="col-lg-4 col-md-6 " v-for="course in courses" :key="course.id" @click="setId(course)">
+                                <div class="col-lg-4 col-md-6 " data-aos="fade-up" v-for="course in courses" :key="course.id" @click="setId(course)">
                                     <!---Single Courses Start -->
                                     <div class="single-courses ">
                                         <div class="courses-images">
@@ -904,7 +905,9 @@
 
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js "></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js "></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
+        AOS.init();
         let app = new Vue({
             el: '#app',
             mounted() {
@@ -942,7 +945,7 @@
                         author_name: 'Williams Jason',
                         author_image: 'assets/images/author/author-01.jpg',
                         course_category: 'Industrial Automation',
-                        course_name: 'Data Science and Machine Learning with Python - Hands On!',
+                        course_name: 'Full Stack Industrial Automation & PLCs Programming',
                         course_time: '6 months',
                         course_lectures: '29',
                         course_sales_price: 400.00,
@@ -959,7 +962,7 @@
                         author_name: 'Williams Jason',
                         author_image: 'assets/images/author/author-02.jpg',
                         course_category: 'Industrial Automation',
-                        course_name: 'Create Amazing Color Schemes for Your UX Design Projects!',
+                        course_name: 'Full Stack IOT & Embedded System Development',
                         course_time: '6 months',
                         course_lectures: '29',
                         course_sales_price: 400.00,
@@ -974,7 +977,7 @@
                         author_name: 'Williams Jason',
                         author_image: 'assets/images/author/author-03.jpg',
                         course_category: 'Industrial Automation',
-                        course_name: 'Culture & Leadership: Strategies for a Successful Business!',
+                        course_name: 'Full Stack Control Management & instrumental',
                         course_time: '6 months',
                         course_lectures: '29',
                         course_sales_price: 400.00,
@@ -1036,7 +1039,7 @@
                         author_name: 'Williams Jason',
                         author_image: 'assets/images/author/author-02.jpg',
                         course_category: 'Programming',
-                        course_name: 'Data Science and Machine Learning with Python - Hands On!',
+                        course_name: 'Full Stack Mobile Programming & Development',
                         course_time: '6 months',
                         course_lectures: '29',
                         course_sales_price: 400.00,
@@ -1051,7 +1054,7 @@
                         author_name: 'Williams Jason',
                         author_image: 'assets/images/author/author-02.jpg',
                         course_category: 'Programming',
-                        course_name: 'Data Science and Machine Learning with Python - Hands On!',
+                        course_name: 'Frontend speacialist Course - laravel',
                         course_time: '6 months',
                         course_lectures: '29',
                         course_sales_price: 400.00,
@@ -1066,7 +1069,7 @@
                         author_name: 'Olu Head',
                         author_image: 'assets/images/author/author-01.jpg',
                         course_category: 'Programming',
-                        course_name: 'Create Amazing Color Schemes for Your UX Design Projects!',
+                        course_name: 'Full Stack Web Programming & Development',
                         course_time: '6 months',
                         course_lectures: '22',
                         course_sales_price: 400.00,
@@ -1090,6 +1093,38 @@
                         certificate: 'yes',
                         language: 'English',
                         level: 'Secondary'
+                    },
+                    {
+                        id: 6,
+                        course_img: 'assets/images/coming soon.png',
+                        author_name: 'Mrs Imade',
+                        author_image: 'assets/images/author/author-03.jpg',
+                        course_category: 'Data Science',
+                        course_name: '  Coming Soon',
+                    },
+                    {
+                        id: 6,
+                        course_img: 'assets/images/coming soon.png',
+                        author_name: 'Mrs Imade',
+                        author_image: 'assets/images/author/author-03.jpg',
+                        course_category: 'Cyber Security',
+                        course_name: '  Coming Soon',
+                    },
+                    {
+                        id: 6,
+                        course_img: 'assets/images/coming soon.png',
+                        author_name: 'Mrs Imade',
+                        author_image: 'assets/images/author/author-03.jpg',
+                        course_category: 'Financial',
+                        course_name: '  Coming Soon',
+                    },
+                    {
+                        id: 6,
+                        course_img: 'assets/images/coming soon.png',
+                        author_name: 'Mrs Imade',
+                        author_image: 'assets/images/author/author-03.jpg',
+                        course_category: 'Marketing',
+                        course_name: '  Coming Soon',
                     },
 
                 ]
