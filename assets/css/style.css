@@ -15855,19 +15855,7 @@ only screen and (max-width: 575px) {
 }
 
 .section-title.shape-01 .main-title span::before {
-    position: absolute;
-    content: '';
-    background-image: url(../images/shape/shape-11.png);
-    background-position: center center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    width: 122px;
-    height: 24px;
-    left: 50%;
-    bottom: -26px;
-    -webkit-transform: translateX(-50%);
-    -ms-transform: translateX(-50%);
-    transform: translateX(-50%);
+
 }
 
 @media only screen and (max-width: 575px) {
@@ -17259,7 +17247,7 @@ only screen and (max-width: 767px) {
 
 .header-menu .sub-menu {
     position: absolute;
-    width: 225px;
+    width: 280px;
     background-color: #fff;
     border-top: 2px solid #212832;
     padding: 10px 0px;
@@ -17276,7 +17264,8 @@ only screen and (max-width: 767px) {
 }
 
 .header-menu .sub-menu li {
-    padding: 0;
+    padding: 10px;
+    box-shadow: 0px 10px 30px 0px rgb(0 0 0 / 10%);
 }
 
 .header-menu .sub-menu li a {
@@ -19010,13 +18999,13 @@ only screen and (min-width: 1200px) and (max-width: 1599px) {
 }
 
 .courses-tabs-menu .nav li button {
-    width: 100%;
+    width: 105%;
     height: 60px;
     border: 1px solid rgba(48, 146, 85, 0.2);
     border-radius: 10px;
     background-color: #fff;
     color: #212832;
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 500;
     -webkit-transition: all 0.3s ease 0s;
     -o-transition: all 0.3s ease 0s;
@@ -19096,12 +19085,12 @@ only screen and (min-width: 1200px) and (max-width: 1599px) {
 
 .single-courses {
     margin-top: 30px;
-    border: 1px solid rgba(48, 146, 85, 0.2);
-    border-radius: 15px;
+    
     padding: 20px;
     -webkit-transition: all 0.3s ease 0s;
     -o-transition: all 0.3s ease 0s;
     transition: all 0.3s ease 0s;
+    box-shadow: 0px 10px 30px 0px rgb(0 0 0 / 10%);
 }
 
 .single-courses .courses-images {
@@ -20755,11 +20744,11 @@ only screen and (max-width: 767px) {
 }
 
 .page-banner-content .title {
-    font-size: 40px;
+    font-size: 30px;
     font-weight: 500;
     margin-bottom: 0;
     margin-top: 15px;
-    padding-bottom: 15px;
+    padding-bottom: 5px;
     line-height: 1.6;
 }
 
@@ -21691,12 +21680,21 @@ only screen and (min-width: 768px) and (max-width: 991px) {
 }
 
 .courses-details-tab .details-tab-content .tab-reviews .single-review {
-    border: 1px solid rgba(48, 146, 85, 0.2);
+    /*border: 1px solid rgba(48, 146, 85, 0.2);*/
     border-radius: 10px;
-    padding: 30px;
+    padding: 20px;
     position: relative;
     overflow: hidden;
 }
+
+.swipe_ {
+    background: #FFFFFF!important;
+    border: none!important;
+    box-shadow: 0px 10px 30px 0px rgb(0 0 0 / 10%)!important;
+    border-radius: 16px!important;
+}
+
+
 
 .courses-details-tab .details-tab-content .tab-reviews .single-review::before {
     position: absolute;
