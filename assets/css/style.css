@@ -19001,6 +19001,7 @@ only screen and (min-width: 1200px) and (max-width: 1599px) {
 .courses-tabs-menu .nav li button {
     width: 105%;
     height: 60px;
+    margin: 0px 100px 0px;
     border: 1px solid rgba(48, 146, 85, 0.2);
     border-radius: 10px;
     background-color: #fff;
@@ -19085,7 +19086,7 @@ only screen and (min-width: 1200px) and (max-width: 1599px) {
 
 .single-courses {
     margin-top: 30px;
-    
+
     padding: 20px;
     -webkit-transition: all 0.3s ease 0s;
     -o-transition: all 0.3s ease 0s;
@@ -19353,8 +19354,7 @@ only screen and (max-width: 575px) {
 }
 
 .single-courses .courses-content .courses-price-review {
-    background-color: #f9edee;
-    padding: 15px 20px;
+
     border-radius: 10px;
     display: -webkit-box;
     display: -webkit-flex;
@@ -19368,7 +19368,6 @@ only screen and (max-width: 575px) {
     -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center;
-    margin-top: 20px;
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
@@ -19390,7 +19389,7 @@ only screen and (max-width: 575px) {
 }
 
 .single-courses .courses-content .courses-price-review .courses-price .sale-parice {
-    font-size: 18px;
+    font-size: 10px;
     font-weight: 700;
     color: #ec2535;
     margin-right: 5px;
@@ -19400,11 +19399,11 @@ only screen and (max-width: 575px) {
 only screen and (min-width: 768px) and (max-width: 991px) {
     .single-courses .courses-content .courses-price-review .courses-price .sale-parice {
         font-size: 16px;
-    }
+    }f
 }
 
 .single-courses .courses-content .courses-price-review .courses-price .old-parice {
-    font-size: 15px;
+    font-size: 11px;
     font-weight: 500;
     color: #212832;
     text-decoration: line-through;

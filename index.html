@@ -476,11 +476,6 @@
                                             </div>
 
                                             <h4 class="title "><a href="courses-details.html ">{{course.course_name}}</a></h4>
-                                            <div class="courses-meta ">
-                                                <span> <i class="icofont-clock-time "></i> {{course.course_time}}</span>
-                                                <span> <i class="icofont-read-book "></i> {{course.course_lectures}}
-                                                    Lectures </span>
-                                            </div>
                                             <div class="courses-price-review ">
                                                 <div class="courses-price ">
                                                     <span class="sale-parice ">${{course.course_old_price}}</span>
@@ -493,6 +488,12 @@
                                                     </span>
                                                 </div>
                                             </div>
+                                            <div class="courses-meta pb-1">
+                                                <span> <i class="icofont-clock-time "></i> {{course.course_time}}</span>
+                                                <span> <i class="icofont-read-book "></i> {{course.course_lectures}}
+                                                    Lectures </span>
+                                            </div>
+
                                         </div>
                                     </div>
                                     <!-- Single Courses End -->
@@ -711,7 +712,7 @@
 
             <!-- All Courses BUtton Start -->
             <div class="courses-btn text-center ">
-                <a href="programs.html" class="btn btn-secondary btn-hover-primary ">Other Course</a>
+                <a href="programs.html" class="btn btn-secondary btn-hover-primary ">View more</a>
             </div>
             <!-- All Courses BUtton End -->
 
@@ -1386,13 +1387,7 @@
                 }, {
                     name: 'Cyber Security',
                     id: '4',
-                }, {
-                    name: 'Financial',
-                    id: '5',
-                }, {
-                    name: 'Marketing',
-                    id: '6',
-                }],
+                },  ],
                 courses: [],
                 original_courses: [
 
