@@ -20,6 +20,8 @@
     <link rel="stylesheet" href="assets/css/plugins/icofont.min.css" />
     <link rel="stylesheet" href="assets/css/plugins/flaticon.css" />
     <link rel="stylesheet" href="assets/css/plugins/font-awesome.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js "></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js "></script>
 
     <!-- Plugins CSS -->
     <link rel="stylesheet" href="assets/css/plugins/animate.min.css" />
@@ -460,31 +462,10 @@
                                         <div class="tab-pane fade show active" id="description">
                                             <!-- Tab Description Start -->
                                             <div class="tab-description">
-                                                <div class="description-wrapper">
-                                                    <h3 class="tab-title">Description:</h3>
+                                                <div class="description-wrapper" v-for="(description,index) in course.descriptions" :key="index">
+                                                    <h3 class="tab-title">{{description.topic}}:</h3>
                                                     <p>
-                                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-                                                    </p>
-                                                    <p>
-                                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has
-                                                        survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularsed in the 1960 with release containing Lorem Ipsum passages desktop
-                                                        publishing software.
-                                                    </p>
-                                                </div>
-                                                <div class="description-wrapper">
-                                                    <h3 class="tab-title">Curriculum:</h3>
-                                                    <p>
-                                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has
-                                                        survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularsed in the 1960 with release containing Lorem Ipsum passages desktop
-                                                        publishing software.
-                                                    </p>
-                                                </div>
-                                                <div class="description-wrapper">
-                                                    <h3 class="tab-title">Certification:</h3>
-                                                    <p>
-                                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has
-                                                        survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularsed in the 1960 with release containing Lorem Ipsum passages desktop
-                                                        publishing software.
+                                                        {{description.text}}
                                                     </p>
                                                 </div>
                                             </div>
