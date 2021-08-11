@@ -17116,7 +17116,7 @@ only screen and (max-width: 575px) {
     -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center;
-    border: 1px solid rgba(48, 146, 85, 0.25);
+    /*border: 1px solid rgba(48, 146, 85, 0.25);*/
     padding: 16px 15px;
     border-radius: 15px;
     margin-left: -15px;
@@ -18483,19 +18483,19 @@ only screen and (max-width: 767px) {
 }
 
 .slider-content .main-title span::before {
-    position: absolute;
-    content: '';
-    background-image: url(../images/shape/shape-4.png);
-    background-position: center center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    width: 214px;
-    height: 21px;
-    left: 50%;
-    bottom: -26px;
-    -webkit-transform: translateX(-50%);
-    -ms-transform: translateX(-50%);
-    transform: translateX(-50%);
+    /*position: absolute;*/
+    /*content: '';*/
+    /*background-image: url(../images/shape/shape-4.png);*/
+    /*background-position: center center;*/
+    /*background-size: cover;*/
+    /*background-repeat: no-repeat;*/
+    /*width: 214px;*/
+    /*height: 21px;*/
+    /*left: 50%;*/
+    /*bottom: -26px;*/
+    /*-webkit-transform: translateX(-50%);*/
+    /*-ms-transform: translateX(-50%);*/
+    /*transform: translateX(-50%);*/
 }
 
 @media only screen and (max-width: 575px) {
@@ -19626,7 +19626,7 @@ only screen and (max-width: 767px) {
 }
 
 .courses-category-wrapper .category-menu li a {
-    width: 160px;
+    width: 220px;
     height: 60px;
     line-height: 58px;
     border: 1px solid rgba(48, 146, 85, 0.2);
