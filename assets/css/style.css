@@ -13194,6 +13194,23 @@ fieldset:disabled .btn {
         padding-right: 2.1875rem !important;
         padding-left: 2.1875rem !important;
     }
+
+    .red-list li::before {
+        content: "\1F534";
+        width: 5px;
+        height: 5px;
+        background-color: #E90003;
+        color: transparent;
+        font-size: 5px;
+        vertical-align: middle;
+        margin-right: 1rem;
+        border-radius: 100%;
+    }
+
+    .red-list li {
+        margin-bottom: 1rem;
+    }
+
     .px-lg-8 {
         padding-right: 2.5rem !important;
         padding-left: 2.5rem !important;

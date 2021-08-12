@@ -477,7 +477,7 @@
                                             <div class="tab-instructors">
                                                 <h3 class="tab-title mb-4">Course Structure:</h3>
 
-                                                <div class=" swipe_ col-md-12 p-3 mb-5">
+                                                <div class=" swipe_ col-md-12 p-3 mb-5" v-for="(structure,index) in course.structure" :key="index">
                                                     <div class="swiper-wrapper">
                                                         <!-- Single Reviews Start -->
                                                         <div class="single-review swiper-slide ">
@@ -486,67 +486,268 @@
                                                                     <img src="assets/images/author/author-06.jpg" alt="Author" />
                                                                 </div>
                                                                 <div class="author-content mt-5 m-lg-4 pt-5">
-                                                                    <h4 class="name">3 Months Intensive Lessons</h4>
-
+                                                                    <h4 class="name">{{structure.topic}}</h4>
                                                                 </div>
                                                             </div>
                                                             <p class="pb-3">
-                                                                This Program Consist of Online Virtual Classes, modularised lessons managed by Learning Management System with assignments,
-                                                                downloadable study materials and video lectures to fully engage the student on weekly basis.
-                                                            </p>
-                                                            <p class="pb-3">
-                                                                Student will be involved in lab work after each key
-                                                                concept is taught, the lab work shall be in the form of practicals with guide from instructors,
-                                                                each assignment and lab work shall be used as part of performance and assessment grading.
+                                                               {{structure.text}}
                                                             </p>
                                                         </div>
 
                                                     </div>
                                                 </div>
-                                                <div class=" swipe_ col-md-12 p-3 mb-5">
-                                                    <div class="swiper-wrapper">
-                                                        <!-- Single Reviews Start -->
-                                                        <div class="single-review swiper-slide ">
-                                                            <div class="review-author p-3 d-flex">
-                                                                <div class="author-thumb">
-                                                                    <img src="assets/images/author/author-07.jpg" alt="Author" />
-                                                                </div>
-                                                                <div class="author-content mt-5 m-lg-4 pt-5">
-                                                                    <h4 class="name">3 Months Project Based Learning.</h4>
 
-                                                                </div>
-                                                            </div>
-                                                            <p class="pb-3">
-                                                                Student will gain knowledge and skills by working for 3 months
-                                                                to investigate and respond with a solution to an authentic industry related problem.
-                                                                Student shall engage with project management tools to enable them gain understanding of tasks, timelines,
-                                                                schedules with a project Manager assigned.
-                                                            </p>
+                                                <section class="py-5 container d-flex justify-content-center">
+                                                    <div class="mw-900">
+                                                        <div class="col-md-12">
+                                                            <h3 class="text-center textcap py-4 py-lg-5 mt-4">A typical week at Madesoft Academy</h3>
+                                                            <img  src="assets/images/madesoft_academy_timetable.png" class="img-fluid my-4"
+                                                                 alt="">
+                                                            <ul class=" text-10  mx-md-4 mx-lg-5 red-list pt-3">
+                                                                <li ><strong>Live Workshops:</strong> Physical Workshop to consolidate the learning will
+                                                                    be conducted in Batches. Due to widespread of our student a separate time table for Workshops and locations shall be communicated by Instructor.
+
+                                                                <li ><strong>Virtual Classes:</strong> By illustrating concepts and the
+                                                                    real-time use-case demonstration Interact, mentors can lead you through live interactive lessons to develop a
+                                                                    sound understanding of concepts on a weekly basis.
+                                                                </li>
+
+                                                                <li ><strong>Structured Intervention:</strong>
+                                                                    Apply the learnings from Online Classrooms by designing tasks and projects of your own. This will be supported by
+                                                                    formal intervention sessions with our mentors which include task / assignment explainer and support.
+                                                                </li>
+
+                                                                <li ><strong>Individual Learning On LMS:</strong> Learn
+                                                                    predefined challenging content by yourself. This part will be carefully tailored to your personal progress. Also
+                                                                    the structured Intervention where you can reach out to your mentor in the case of any challenges.
+                                                                </li>
+
+                                                                <li ><strong>Personal Exercise/Assignments:</strong> Solve
+                                                                    predefined challenging Exercise/Assignment by yourself. Also the structured Intervention where you can
+                                                                    reach out to your mentor in the case of any challenges.
+
+                                                                </li>
+
+                                                                <li data-aos="fade-right" data-aos-offset="150"><strong>Personal Lab Work:</strong> Solve
+                                                                    predefined challenging Lab work by yourself. Also the structured Intervention where you can
+                                                                    reach out to your mentor in the case of any challenges.
+
+                                                                </li>
+                                                            </ul>
+
                                                         </div>
-
                                                     </div>
-                                                </div>
-                                                <div class=" swipe_ col-md-12 p-3">
-                                                    <div class="swiper-wrapper">
-                                                        <!-- Single Reviews Start -->
-                                                        <div class="single-review swiper-slide ">
-                                                            <div class="review-author p-3 d-flex">
-                                                                <div class="author-thumb">
-                                                                    <img src="assets/images/author/author-07.jpg" alt="Author" />
-                                                                </div>
-                                                                <div class="author-content mt-5 m-lg-4 pt-5">
-                                                                    <h4 class="name">3 Months Project Based Learning.</h4>
+                                                </section>
+
+                                                <div class="side-content-mob" id="content-mob-6">
+                                                    <div class="side-content-mob-inner">
+                                                        <div class="">
+                                                            <h1 class="mt-5 pt-4">Frequently Asked Questions</h1>
+                                                            <div class="mt-5">
+                                                                <div class="panel-group" id="faqAccordion">
+                                                                    <div class="panel panel-default ">
+                                                                        <div class="panel-heading d-flex accordion-toggle question-toggle collapsed"
+                                                                             data-toggle="collapse" data-parent="#faqAccordion"
+                                                                             data-target="#question0"
+                                                                             style="background-color: white; border: none!important; cursor: pointer;">
+                                                                            <h4 class="panel-title">
+                                                                                <a href="#" class="ing"> Why should i attend Fullstack
+                                                                                    Academy?</a>
+                                                                            </h4>
+
+                                                                            <div class="d-flex ml-auto">
+                                                                                <i class="fa fa-caret-down" style="cursor: pointer;"
+                                                                                   aria-hidden="true"></i>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div id="question0" class="panel-collapse collapse"
+                                                                             style="height: 0px;">
+                                                                            <div class="panel-body">
+                                                                                <h5><span class="label label-primary">Answer</span></h5>
+
+                                                                                <p>Lorem Ipsum is simply dummy text of the printing and
+                                                                                    typesetting
+                                                                                    industry. Lorem Ipsum has been the industry's standard
+                                                                                    dummy
+                                                                                    text
+                                                                                    ever since the 1500s, when an unknown printer took a
+                                                                                    galley of
+                                                                                    type
+                                                                                    and scrambled it to make a type specimen book. It has
+                                                                                    survived
+                                                                                    not
+                                                                                    only five <a href="http://jquery2dotnet.com/"
+                                                                                                 class="label label-success">http://jquery2dotnet.com/</a>
+                                                                                    centuries, but also the leap into electronic
+                                                                                    typesetting,
+                                                                                    remaining
+                                                                                    essentially unchanged. It was popularised in the 1960s
+                                                                                    with the
+                                                                                    release of Letraset sheets containing Lorem Ipsum
+                                                                                    passages, and
+                                                                                    more
+                                                                                    recently with desktop publishing software like Aldus
+                                                                                    PageMaker
+                                                                                    including versions of Lorem Ipsum.
+                                                                                </p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+
+                                                                    <div class="panel panel-default ">
+                                                                        <div class="panel-heading d-flex accordion-toggle collapsed question-toggle"
+                                                                             data-toggle="collapse" data-parent="#faqAccordion"
+                                                                             data-target="#question1"
+                                                                             style="background-color: white; border: none!important; cursor: pointer;">
+                                                                            <h4 class="panel-title">
+                                                                                <a href="#" class="ing"><a href="#" class="ing"> Why
+                                                                                    Fullstack
+                                                                                    Javascript?</a>
+                                                                            </h4>
+
+                                                                            <div class="d-flex ml-auto">
+                                                                                <i class="fa fa-caret-down" style="cursor: pointer;"
+                                                                                   aria-hidden="true"></i>
+                                                                            </div>
+
+                                                                        </div>
+                                                                        <div id="question1" class="panel-collapse collapse"
+                                                                             style="height: 0px;">
+                                                                            <div class="panel-body">
+                                                                                <h5><span class="label label-primary">Answer</span></h5>
+
+                                                                                <p>It is a long established fact that a reader will be
+                                                                                    distracted by
+                                                                                    the
+                                                                                    readable content of a page when looking at its layout.
+                                                                                    The point
+                                                                                    of
+                                                                                    using Lorem Ipsum is that it has a more-or-less normal
+                                                                                    distribution
+                                                                                    of letters, as opposed to using 'Content here, content
+                                                                                    here',
+                                                                                    making
+                                                                                    it look like readable English. Many desktop publishing
+                                                                                    packages
+                                                                                    and
+                                                                                    web page editors now use Lorem Ipsum as their default
+                                                                                    model
+                                                                                    text,
+                                                                                    and a search for 'lorem ipsum' will uncover many web
+                                                                                    sites still
+                                                                                    in
+                                                                                    their infancy. Various versions have evolved over the
+                                                                                    years,
+                                                                                    sometimes by accident, sometimes on purpose (injected
+                                                                                    humour and
+                                                                                    the
+                                                                                    like).</p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+
+                                                                    <div class="panel panel-default ">
+                                                                        <div class="panel-heading d-flex accordion-toggle collapsed question-toggle"
+                                                                             data-toggle="collapse" data-parent="#faqAccordion"
+                                                                             data-target="#question2"
+                                                                             style="background-color: white; border: none!important; cursor: pointer;">
+                                                                            <h4 class="panel-title">
+                                                                                <a href="#" class="ing"><a href="#" class="ing">Do you
+                                                                                    accept the
+                                                                                    new GI
+                                                                                    Bill (for venterans?)</a>
+                                                                            </h4>
+
+
+                                                                            <div class="d-flex ml-auto">
+                                                                                <i class="fa fa-caret-down" style="cursor: pointer;"
+                                                                                   aria-hidden="true"></i>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div id="question2" class="panel-collapse collapse"
+                                                                             style="height: 0px;">
+                                                                            <div class="panel-body">
+                                                                                <h5><span class="label label-primary">Answer</span></h5>
+
+                                                                                <p>Contrary to popular belief, Lorem Ipsum is not simply
+                                                                                    random
+                                                                                    text. It
+                                                                                    has roots in a piece of classical Latin literature from
+                                                                                    45 BC,
+                                                                                    making it over 2000 years old. Richard McClintock, a
+                                                                                    Latin
+                                                                                    professor
+                                                                                    at Hampden-Sydney College in Virginia, looked up one of
+                                                                                    the more
+                                                                                    obscure Latin words, consectetur, from a Lorem Ipsum
+                                                                                    passage,
+                                                                                    and
+                                                                                    going through the cites of the word in classical
+                                                                                    literature,
+                                                                                    discovered the undoubtable source. Lorem Ipsum comes
+                                                                                    from
+                                                                                    sections
+                                                                                    1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum"
+                                                                                    (The
+                                                                                    Extremes
+                                                                                    of Good and Evil) by Cicero, written in 45 BC. This book
+                                                                                    is a
+                                                                                    treatise on the theory of ethics, very popular during
+                                                                                    the
+                                                                                    Renaissance. The first line of Lorem Ipsum, "Lorem ipsum
+                                                                                    dolor
+                                                                                    sit
+                                                                                    amet..", comes from a line in section 1.10.32.</p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+
+                                                                    <div class="panel panel-default">
+                                                                        <div class="panel-heading d-flex accordion-toggle collapsed question-toggle"
+                                                                             data-toggle="collapse" data-parent="#faqAccordion"
+                                                                             data-target="#question3"
+                                                                             style="background-color: white; border: none!important; cursor: pointer;"
+                                                                             title="">
+                                                                            <h4 class="panel-title">
+                                                                                <a href="#" class="ing"><a href="#" class="ing"> How dose
+                                                                                    the
+                                                                                    immersive
+                                                                                    program compare to online resources</a>
+                                                                            </h4>
+
+
+                                                                            <div class="d-flex ml-auto">
+                                                                                <i class="fa fa-caret-down" style="cursor: pointer;"
+                                                                                   aria-hidden="true"></i>
+                                                                            </div>
+
+                                                                        </div>
+                                                                        <div id="question3" class="panel-collapse collapse"
+                                                                             style="height: 0px;">
+                                                                            <div class="panel-body">
+                                                                                <h5><span class="label label-primary">Answer</span></h5>
+
+                                                                                <p>There are many variations of passages of Lorem Ipsum
+                                                                                    available,
+                                                                                    but
+                                                                                    the majority have suffered alteration in some form, by
+                                                                                    injected
+                                                                                    humour, or randomised words which don't look even
+                                                                                    slightly
+                                                                                    believable. If you are going to use a passage of Lorem
+                                                                                    Ipsum,
+                                                                                    you
+                                                                                    need to be sure there isn't anything embarrassing hidden
+                                                                                    in the
+                                                                                    middle of text. </p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
 
                                                                 </div>
+                                                                <!--/panel-group-->
                                                             </div>
-                                                            <p class="pb-3">
-                                                                Student will gain knowledge and skills by working for 3 months
-                                                                to investigate and respond with a solution to an authentic industry related problem.
-                                                                Student shall engage with project management tools to enable them gain understanding of tasks, timelines,
-                                                                schedules with a project Manager assigned.
-                                                            </p>
                                                         </div>
-
                                                     </div>
                                                 </div>
                                             </div>
@@ -1012,21 +1213,6 @@
                         course_rating: 4.9,
                         certificate: 'yes',
                         language: 'English',
-                        descriptions: [
-                            {
-                                topic: 'Description',
-                                text: 'In this Course, you’ll begin with the front-end, move on to the back-end, then learn to connect the two. By the time you’re done, you’ll have the well-rounded skills needed to enter the job market.\n' +
-                                    'The goal of this 6-Months full-time program is to turn you into a fully operational Full Stack Web & App Developer. Graduates of this course typically find employment as Web Developers within a very short time frame.\n' +
-                                    'The lessons taught cover a diverse set of technologies which make for the perfect springboard onto the tech scene. As you acquire a deep understanding of modern web development, you will be primed to add more technologies, languages, and frameworks which will help you develop your career.If you don’t have the time to attend full-time, please check our part-time Web & App Development course!\n'
-                            },
-                            {
-                                topic: 'Curriculum',
-                                text: 'Our Curriculum helps you to become a ready-to-hire Full-Stack Web Application Developer in just 6 Months. After 3 Months of Virtual Classroom training, you will spend 3 Months on Project Based Learning where you will learn the fundamentals of participating in a real life project – In addition to HTML, CSS, and JavaScript, you will learn about the most innovative tech stack used in web development – including in-demand technologies like VueJs, ReactJS, Laravel & NodeJS.'
-                            },
-                            {
-                                topic: 'Cetificate',
-                                text: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularsed in the 1960 with release containing Lorem Ipsum passages desktop publishing software.'
-                            },  ],
                         level: 'Secondary'
                     },
 
@@ -1044,21 +1230,6 @@
                         course_rating: 4.9,
                         certificate: 'yes',
                         language: 'English',
-                        descriptions: [
-                            {
-                                topic: 'Description',
-                                text: 'In this Course, you’ll begin with the front-end, move on to the back-end, then learn to connect the two. By the time you’re done, you’ll have the well-rounded skills needed to enter the job market.\n' +
-                                    'The goal of this 6-Months full-time program is to turn you into a fully operational Full Stack Web & App Developer. Graduates of this course typically find employment as Web Developers within a very short time frame.\n' +
-                                    'The lessons taught cover a diverse set of technologies which make for the perfect springboard onto the tech scene. As you acquire a deep understanding of modern web development, you will be primed to add more technologies, languages, and frameworks which will help you develop your career.If you don’t have the time to attend full-time, please check our part-time Web & App Development course!\n'
-                            },
-                            {
-                                topic: 'Curriculum',
-                                text: 'Our Curriculum helps you to become a ready-to-hire Full-Stack Web Application Developer in just 6 Months. After 3 Months of Virtual Classroom training, you will spend 3 Months on Project Based Learning where you will learn the fundamentals of participating in a real life project – In addition to HTML, CSS, and JavaScript, you will learn about the most innovative tech stack used in web development – including in-demand technologies like VueJs, ReactJS, Laravel & NodeJS.'
-                            },
-                            {
-                                topic: 'Cetificate',
-                                text: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularsed in the 1960 with release containing Lorem Ipsum passages desktop publishing software.'
-                            },  ],
                         level: 'Secondary'
                     }, {
                         id: 3,
@@ -1066,7 +1237,7 @@
                         author_name: 'Williams Jason',
                         author_image: 'assets/images/author/author-03.jpg',
                         course_category: 'Industrial Automation',
-                        course_name: 'Industrial Control Networking Design & Development',
+                        course_name: 'Industrial control networking design & development',
                         course_time: '6 months',
                         course_lectures: '29',
                         course_sales_price: 400.00,
