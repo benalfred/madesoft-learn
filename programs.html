@@ -457,11 +457,11 @@
                     <div class="">
 
                         <!---All Courses Wrapper Start -->
-                        <div class="courses-wrapper">
+                        <div class="courses-wrapper ">
                             <div class="row">
-                                <div class="col-lg-4 col-md-6 " data-aos="fade-up" v-for="course in courses" :key="course.id" @click="setId(course)">
+                                <div class="col-lg-4 col-md-6  col-container_" data-aos="fade-up" v-for="course in courses" :key="course.id" @click="setId(course)">
                                     <!---Single Courses Start -->
-                                    <div class="single-courses ">
+                                    <div class="single-courses col_">
                                         <div class="courses-images">
                                             <a href="courses-details.html "><img :src="course.course_img" alt="Courses"></a>
                                         </div>

@@ -350,17 +350,17 @@
 
         <!-- Page Banner Start -->
         <div class="section page-banner">
-            <img class="shape-1 animation-round" src="assets/images/shape/shape-8.png" alt="Shape" />
+<!--            <img class="shape-1 animation-round" src="assets/images/shape/shape-8.png" alt="Shape" />-->
 
             <img class="shape-2" src="assets/images/shape/shape-23.png" alt="Shape" />
 
             <div class="container">
                 <!-- Page Banner Start -->
                 <div class="page-banner-content">
-                    <ul class="breadcrumb">
-                        <li><a href="#">Home</a></li>
-                        <li class="active">Courses Details</li>
-                    </ul>
+<!--                    <ul class="breadcrumb">-->
+<!--                        <li><a href="#">Home</a></li>-->
+<!--                        <li class="active">Courses Details</li>-->
+<!--                    </ul>-->
                     <h5 class="title"> {{course.course_name}}<span> Details</span></h5>
                 </div>
                 <!-- Page Banner End -->
@@ -411,11 +411,11 @@
                             <div class="courses-details-admin">
                                 <div class="admin-author">
                                     <div class="author-thumb">
-                                        <img src="assets/images/author/author-01.jpg" alt="Author" />
+<!--                                        <img src="assets/images/author/author-01.jpg" alt="Author" />-->
                                     </div>
                                     <div class="author-content">
-                                        <a class="name" href="#" v-if="course">{{course.author_name}}</a>
-                                        <span class="Enroll">286 Enrolled Students</span>
+<!--                                        <a class="name" href="#" v-if="course">{{course.author_name}}</a>-->
+<!--                                        <span class="Enroll">286 Enrolled Students</span>-->
                                     </div>
                                 </div>
                                 <div class="admin-rating">
@@ -423,7 +423,7 @@
                                     <span class="rating-star">
                                         <span class="rating-bar" style="width: 80%"></span>
                                     </span>
-                                    <span class="rating-text">(5,764 Rating)</span>
+                                    <span class="rating-text">(Rating)</span>
                                 </div>
                             </div>
 
@@ -557,9 +557,25 @@
                                                             </button>
                                                         </h2>
                                                         <div id="flush-collapseOne" class="accordion-collapse " aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-                                                            <div class="accordion-body">PLC Overview & Hardware Components, <br> Number Systems and Codes, <br> Fundamentals of Logic,
-                                                                Basics of PLC Programming Developing Fundamental PLC Wiring Diagrams and Ladder Logic Programs, <br> Programming Timers, <br> Programming Counters, <br> Program Control Instructions, <br> Data Manipulation Instructions, <br> Math Instructions,
-                                                                Sequencer and Shift Register Instructions, <br> PLC Installation Practices, <br> Editing, and Troubleshooting</div>
+                                                            <div class="accordion-body">
+                                                                <ul class="red-list_">
+                                                                    <li>
+                                                                        PLC Overview & Hardware Components,
+                                                                    </li>
+                                                                    <li>PLC Installation Practices,</li>
+                                                                    <li>Number Systems and Codes,</li>
+                                                                    <li>Fundamentals of Logic,</li>
+                                                                    <li>Programming Timers,</li>
+                                                                    <li>Programming Counters,</li>
+                                                                    <li>Program Control Instructions,</li>
+                                                                    <li>Data Manipulation Instructions,</li>
+                                                                    <li>Math Instructions,</li>
+                                                                    <li>Sequencer and Shift Register Instructions,</li>
+                                                                    <li> Basics of PLC Programming Developing Fundamental PLC Wiring Diagrams and Ladder Logic Programs,</li>
+
+                                                                </ul>
+                                                                </ul>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                     <div class="accordion-item">
@@ -569,11 +585,24 @@
                                                             </button>
                                                         </h2>
                                                         <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
-                                                            <div class="accordion-body">HMI Display Design, HMI Display Color Guidelines, <br> HMI Display Navigation HMI File
-                                                                and Object Naming Conventions, <br> Alarm & Event Views, HMI Display Scripting, <br> Introduction FactoryTalk,
-                                                                Ignition & WinCC HMI Display Building Platforms <br>
-                                                                Industrial Communication
-                                                                EtherNet/IP Modbus, OPC, <br> DeviceNet, ControlNet, <br> Fieldbus – Intro, PROFIBUS-DP - Intro
+                                                            <div class="accordion-body">
+                                                                 <br>
+
+                                                                <ul class="red-list_">
+                                                                    <li>HMI Display Design,</li>
+                                                                    <li>HMI Display Color Guidelines, </li>
+                                                                    <li>HMI Display Navigation HMI File and Object Naming Conventions</li>
+                                                                    <li>Alarm & Event Views,</li>
+                                                                    <li> HMI Display Scripting,</li>
+                                                                    <li>Introduction FactoryTalk,</li>
+                                                                    <li>Ignition & WinCC HMI Display Building Platforms <br>
+                                                                        Industrial Communication
+                                                                        EtherNet/IP Modbus,</li>
+                                                                    <li> OPC, DeviceNet, ControlNet,</li>
+                                                                    <li>Fieldbus – Intro, PROFIBUS-DP - Intro</li>
+
+
+                                                                </ul>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -584,7 +613,15 @@
                                                             </button>
                                                         </h2>
                                                         <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
-                                                            <div class="accordion-body">Remote Telemetry Units (RTUs), <br> Human Machine Interface, <br> Communications Network, <br> Introduction to Ignition SCADA, <br> Introduction to Open Source SCADA</div>
+                                                            <div class="accordion-body">
+                                                            <ul class="red-list_">
+                                                                <li>Remote Telemetry Units (RTUs),</li>
+                                                                <li>Human Machine Interface,</li>
+                                                                <li>Communications Network,</li>
+                                                                <li>Introduction to Ignition SCADA,</li>
+                                                                <li>Introduction to Open Source SCADA</li>
+                                                            </ul>
+                                                            </div>
                                                         </div>
                                                     </div>
 

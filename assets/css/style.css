@@ -13211,6 +13211,31 @@ fieldset:disabled .btn {
         margin-bottom: 1rem;
     }
 
+    .red-list_ li::before {
+        content: "\1F534";
+        width: 3px;
+        height: 3px;
+        background-color: #E90003;
+        color: transparent;
+        font-size: 5px;
+        vertical-align: middle;
+        margin-right: 1rem;
+        border-radius: 100%;
+    }
+
+    .red-list_ li {
+        margin-bottom: 20px;
+    }
+
+    .col-container_ {
+        display: table; /* Make the container element behave like a table */
+         /* Set full-width to expand the whole page */
+    }
+
+    .col_ {
+        display: table-cell;
+    }
+
     .px-lg-8 {
         padding-right: 2.5rem !important;
         padding-left: 2.5rem !important;
