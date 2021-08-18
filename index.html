@@ -431,7 +431,9 @@
                 <div class="courses-tabs-menu courses-active">
                     <div class="swiper-container">
                         <ul class="swiper-wrapper nav">
-                            <li class="swiper-slide" v-for="category in categories" :key="category.id" @click="search(category)"><button :class="[category.id == 1 ? 'active' : '']" data-bs-toggle="tab" :data-bs-target="`#demo${category.id}`">{{category.name}}</button></li>
+                            <li class="swiper-slide"  v-for="category in categories" :key="category.id" @click="search(category)" :class="[category.id == 1 ? 'active' : '']" data-bs-toggle="tab" :data-bs-target="`#demo${category.id}`">
+                                <button >{{category.name}}</button>
+                            </li>
                             <!-- <li class="swiper-slide"><button data-bs-toggle="tab" :data-bs-target="`#demo${index}`">Programming</button></li>
                             <li class="swiper-slide"><button data-bs-toggle="tab" data-bs-target="#tabs3">Data Science</button></li>
                             <li class="swiper-slide"><button data-bs-toggle="tab" data-bs-target="#tabs4">Cyber Security</button></li>
@@ -498,206 +500,7 @@
                                     </div>
                                     <!-- Single Courses End -->
                                 </div>
-                                <!-- <div class="col-lg-4 col-md-6 ">
 
-                                    <div class="single-courses ">
-                                        <div class="courses-images ">
-                                            <a href="courses-details.html "><img src="assets/images/courses/courses-02.jpg " alt="Courses "></a>
-                                        </div>
-                                        <div class="courses-content ">
-                                            <div class="courses-author ">
-                                                <div class="author ">
-                                                    <div class="author-thumb ">
-                                                        <a href="# "><img src="assets/images/author/author-02.jpg " alt="Author "></a>
-                                                    </div>
-                                                    <div class="author-name ">
-                                                        <a class="name " href="# ">Pamela Foster</a>
-                                                    </div>
-                                                </div>
-                                                <div class="tag ">
-                                                    <a href="# ">Science</a>
-                                                </div>
-                                            </div>
-
-                                            <h4 class="title "><a href="courses-details.html ">Create Amazing Color Schemes for Your UX Design Projects</a></h4>
-                                            <div class="courses-meta ">
-                                                <span> <i class="icofont-clock-time "></i> 08 hr 15 mins</span>
-                                                <span> <i class="icofont-read-book "></i> 29 Lectures </span>
-                                            </div>
-                                            <div class="courses-price-review ">
-                                                <div class="courses-price ">
-                                                    <span class="sale-parice ">$420.00</span>
-                                                </div>
-                                                <div class="courses-review ">
-                                                    <span class="rating-count ">4.9</span>
-                                                    <span class="rating-star ">
-															<span class="rating-bar " style="width: 80%; "></span>
-                                                    </span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div> -->
-                                <!-- <div class="col-lg-4 col-md-6 ">
-                                    <div class="single-courses ">
-                                        <div class="courses-images ">
-                                            <a href="courses-details.html "><img src="assets/images/courses/courses-03.jpg " alt="Courses "></a>
-                                        </div>
-                                        <div class="courses-content ">
-                                            <div class="courses-author ">
-                                                <div class="author ">
-                                                    <div class="author-thumb ">
-                                                        <a href="# "><img src="assets/images/author/author-03.jpg " alt="Author"></a>
-                                                    </div>
-                                                    <div class="author-name ">
-                                                        <a class="name " href="# ">Rose Simmons</a>
-                                                    </div>
-                                                </div>
-                                                <div class="tag ">
-                                                    <a href="# ">Science</a>
-                                                </div>
-                                            </div>
-
-                                            <h4 class="title "><a href="courses-details.html ">Culture & Leadership: Strategies for a Successful Business</a></h4>
-                                            <div class="courses-meta ">
-                                                <span> <i class="icofont-clock-time "></i> 08 hr 15 mins</span>
-                                                <span> <i class="icofont-read-book "></i> 29 Lectures </span>
-                                            </div>
-                                            <div class="courses-price-review ">
-                                                <div class="courses-price ">
-                                                    <span class="sale-parice ">$295.00</span>
-                                                    <span class="old-parice ">$340.00</span>
-                                                </div>
-                                                <div class="courses-review ">
-                                                    <span class="rating-count ">4.9</span>
-                                                    <span class="rating-star ">
-															<span class="rating-bar " style="width: 80%; "></span>
-                                                    </span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                            </div> -->
-                                <!-- <div class="col-lg-4 col-md-6 ">
-
-                                    <div class="single-courses ">
-                                        <div class="courses-images ">
-                                            <a href="courses-details.html "><img src="assets/images/courses/courses-04.jpg " alt="Courses "></a>
-                                        </div>
-                                        <div class="courses-content ">
-                                            <div class="courses-author ">
-                                                <div class="author ">
-                                                    <div class="author-thumb ">
-                                                        <a href="# "><img src="assets/images/author/author-04.jpg " alt="Author "></a>
-                                                    </div>
-                                                    <div class="author-name ">
-                                                        <a class="name " href="# ">Jason Williams</a>
-                                                    </div>
-                                                </div>
-                                                <div class="tag ">
-                                                    <a href="# ">Finance</a>
-                                                </div>
-                                            </div>
-
-                                            <h4 class="title "><a href="courses-details.html ">Finance Series: Learn to Budget and Calculate your Net Worth.</a></h4>
-                                            <div class="courses-meta ">
-                                                <span> <i class="icofont-clock-time "></i> 08 hr 15 mins</span>
-                                                <span> <i class="icofont-read-book "></i> 29 Lectures </span>
-                                            </div>
-                                            <div class="courses-price-review ">
-                                                <div class="courses-price ">
-                                                    <span class="sale-parice ">Free</span>
-                                                </div>
-                                                <div class="courses-review ">
-                                                    <span class="rating-count ">4.9</span>
-                                                    <span class="rating-star ">
-															<span class="rating-bar " style="width: 80%; "></span>
-                                                    </span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                            </div> -->
-                                <!-- <div class="col-lg-4 col-md-6 ">
-
-                                    <div class="single-courses ">
-                                        <div class="courses-images ">
-                                            <a href="courses-details.html "><img src="assets/images/courses/courses-05.jpg " alt="Courses "></a>
-                                        </div>
-                                        <div class="courses-content ">
-                                            <div class="courses-author ">
-                                                <div class="author ">
-                                                    <div class="author-thumb ">
-                                                        <a href="# "><img src="assets/images/author/author-05.jpg " alt="Author "></a>
-                                                    </div>
-                                                    <div class="author-name ">
-                                                        <a class="name " href="# ">Jason Williams</a>
-                                                    </div>
-                                                </div>
-                                                <div class="tag ">
-                                                    <a href="# ">Marketing</a>
-                                                </div>
-                                            </div>
-
-                                            <h4 class="title "><a href="courses-details.html ">Build Brand Into Marketing: Tackling the New Marketing Landscape</a></h4>
-                                            <div class="courses-meta ">
-                                                <span> <i class="icofont-clock-time "></i> 08 hr 15 mins</span>
-                                                <span> <i class="icofont-read-book "></i> 29 Lectures </span>
-                                            </div>
-                                            <div class="courses-price-review ">
-                                                <div class="courses-price ">
-                                                    <span class="sale-parice ">$136.00</span>
-                                                </div>
-                                                <div class="courses-review ">
-                                                    <span class="rating-count ">4.9</span>
-                                                    <span class="rating-star ">
-															<span class="rating-bar " style="width: 80%; "></span>
-                                                    </span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                </div> -->
-                                <!-- <div class="col-lg-4 col-md-6 ">
-                                    <div class="single-courses ">
-                                        <div class="courses-images ">
-                                            <a href="courses-details.html "><img src="assets/images/courses/courses-06.jpg " alt="Courses "></a>
-                                        </div>
-                                        <div class="courses-content ">
-                                            <div class="courses-author ">
-                                                <div class="author ">
-                                                    <div class="author-thumb ">
-                                                        <a href="# "><img src="assets/images/author/author-06.jpg " alt="Author "></a>
-                                                    </div>
-                                                    <div class="author-name ">
-                                                        <a class="name " href="# ">Jason Williams</a>
-                                                    </div>
-                                                </div>
-                                                <div class="tag ">
-                                                    <a href="# ">Design</a>
-                                                </div>
-                                            </div>
-
-                                            <h4 class="title "><a href="courses-details.html ">Graphic Design: Illustrating Badges and Icons with Geometric Shapes</a></h4>
-                                            <div class="courses-meta ">
-                                                <span> <i class="icofont-clock-time "></i> 08 hr 15 mins</span>
-                                                <span> <i class="icofont-read-book "></i> 29 Lectures </span>
-                                            </div>
-                                            <div class="courses-price-review ">
-                                                <div class="courses-price ">
-                                                    <span class="sale-parice ">$237.00</span>
-                                                </div>
-                                                <div class="courses-review ">
-                                                    <span class="rating-count ">4.9</span>
-                                                    <span class="rating-star ">
-															<span class="rating-bar " style="width: 80%; "></span>
-                                                    </span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div> -->
                             </div>
                         </div>
                         <!-- All Courses Wrapper End -->
@@ -1027,75 +830,7 @@
         </div>
         <!-- Testimonial End -->
 
-        <!-- Brand Logo Start -->
-<!--        <div class="section section-padding-02 ">-->
-<!--            <div class="container ">-->
 
-<!--                &lt;!&ndash; Brand Logo Wrapper Start &ndash;&gt;-->
-<!--&lt;!&ndash;                <div class="brand-logo-wrapper ">&ndash;&gt;-->
-
-<!--&lt;!&ndash;                    <img class="shape-1 " src="assets/images/shape/shape-19.png " alt="Shape ">&ndash;&gt;-->
-
-<!--&lt;!&ndash;                    <img class="shape-2 animation-round " src="assets/images/shape/shape-20.png " alt="Shape ">&ndash;&gt;-->
-
-<!--&lt;!&ndash;                    &lt;!&ndash; Section Title Start &ndash;&gt;&ndash;&gt;-->
-<!--&lt;!&ndash;                    <div class="section-title shape-03 ">&ndash;&gt;-->
-<!--&lt;!&ndash;                        <h2 class="main-title ">Our <span> Partners.</span></h2>&ndash;&gt;-->
-<!--&lt;!&ndash;                    </div>&ndash;&gt;-->
-<!--&lt;!&ndash;                    &lt;!&ndash; Section Title End &ndash;&gt;&ndash;&gt;-->
-
-<!--&lt;!&ndash;                    &lt;!&ndash; Brand Logo Start &ndash;&gt;&ndash;&gt;-->
-<!--&lt;!&ndash;                    <div class="brand-logo brand-active ">&ndash;&gt;-->
-<!--&lt;!&ndash;                        <div class="swiper-container ">&ndash;&gt;-->
-<!--&lt;!&ndash;                            <div class="swiper-wrapper ">&ndash;&gt;-->
-
-<!--&lt;!&ndash;                                &lt;!&ndash; Single Brand Start &ndash;&gt;&ndash;&gt;-->
-<!--&lt;!&ndash;                                <div class="single-brand swiper-slide ">&ndash;&gt;-->
-<!--&lt;!&ndash;                                    <img src="assets/images/brand/brand-01.png " alt="Brand ">&ndash;&gt;-->
-<!--&lt;!&ndash;                                </div>&ndash;&gt;-->
-<!--&lt;!&ndash;                                &lt;!&ndash; Single Brand End &ndash;&gt;&ndash;&gt;-->
-
-<!--&lt;!&ndash;                                &lt;!&ndash; Single Brand Start &ndash;&gt;&ndash;&gt;-->
-<!--&lt;!&ndash;                                <div class="single-brand swiper-slide ">&ndash;&gt;-->
-<!--&lt;!&ndash;                                    <img src="assets/images/brand/brand-02.png " alt="Brand ">&ndash;&gt;-->
-<!--&lt;!&ndash;                                </div>&ndash;&gt;-->
-<!--&lt;!&ndash;                                &lt;!&ndash; Single Brand End &ndash;&gt;&ndash;&gt;-->
-
-<!--&lt;!&ndash;                                &lt;!&ndash; Single Brand Start &ndash;&gt;&ndash;&gt;-->
-<!--&lt;!&ndash;                                <div class="single-brand swiper-slide ">&ndash;&gt;-->
-<!--&lt;!&ndash;                                    <img src="assets/images/brand/brand-03.png " alt="Brand ">&ndash;&gt;-->
-<!--&lt;!&ndash;                                </div>&ndash;&gt;-->
-<!--&lt;!&ndash;                                &lt;!&ndash; Single Brand End &ndash;&gt;&ndash;&gt;-->
-
-<!--&lt;!&ndash;                                &lt;!&ndash; Single Brand Start &ndash;&gt;&ndash;&gt;-->
-<!--&lt;!&ndash;                                <div class="single-brand swiper-slide ">&ndash;&gt;-->
-<!--&lt;!&ndash;                                    <img src="assets/images/brand/brand-04.png " alt="Brand ">&ndash;&gt;-->
-<!--&lt;!&ndash;                                </div>&ndash;&gt;-->
-<!--&lt;!&ndash;                                &lt;!&ndash; Single Brand End &ndash;&gt;&ndash;&gt;-->
-
-<!--&lt;!&ndash;                                &lt;!&ndash; Single Brand Start &ndash;&gt;&ndash;&gt;-->
-<!--&lt;!&ndash;                                <div class="single-brand swiper-slide ">&ndash;&gt;-->
-<!--&lt;!&ndash;                                    <img src="assets/images/brand/brand-05.png " alt="Brand ">&ndash;&gt;-->
-<!--&lt;!&ndash;                                </div>&ndash;&gt;-->
-<!--&lt;!&ndash;                                &lt;!&ndash; Single Brand End &ndash;&gt;&ndash;&gt;-->
-
-<!--&lt;!&ndash;                                &lt;!&ndash; Single Brand Start &ndash;&gt;&ndash;&gt;-->
-<!--&lt;!&ndash;                                <div class="single-brand swiper-slide ">&ndash;&gt;-->
-<!--&lt;!&ndash;                                    <img src="assets/images/brand/brand-06.png " alt="Brand ">&ndash;&gt;-->
-<!--&lt;!&ndash;                                </div>&ndash;&gt;-->
-<!--&lt;!&ndash;                                &lt;!&ndash; Single Brand End &ndash;&gt;&ndash;&gt;-->
-
-<!--&lt;!&ndash;                            </div>&ndash;&gt;-->
-<!--&lt;!&ndash;                        </div>&ndash;&gt;-->
-<!--&lt;!&ndash;                    </div>&ndash;&gt;-->
-<!--&lt;!&ndash;                    &lt;!&ndash; Brand Logo End &ndash;&gt;&ndash;&gt;-->
-
-<!--&lt;!&ndash;                </div>&ndash;&gt;-->
-<!--                &lt;!&ndash; Brand Logo Wrapper End &ndash;&gt;-->
-
-<!--            </div>-->
-<!--        </div>-->
-        <!-- Brand Logo End -->
 
         <!-- Blog Start -->
         <div class="section section-padding mt-n1 ">
@@ -1421,7 +1156,7 @@
                         author_image: 'assets/images/industrial automation.png',
                         course_category: 'Industrial Automation',
                         course_name: 'Full Stack Industrial Automation & PLCs Programming',
-                        course_time: '6 months',
+                        course_time: '5 months',
                         course_lectures: '6',
                         structure: [
                             {
@@ -1466,10 +1201,10 @@
                         author_name: 'Williams Jason',
                         author_image: 'assets/images/web programming.png',
                         course_category: 'Industrial Automation',
-                        course_name: 'Full Control Management & Instrmentation',
-                        course_time: '6 months',
+                        course_name: 'Industrial Control Network Design',
+                        course_time: '5 months',
                         course_lectures: '6',
-                        course_sales_price: 450.00,
+                        course_sales_price: 110.00,
                         course_old_price: 600.00,
                         course_rating: 4.9,
                         certificate: 'yes',
@@ -1509,14 +1244,14 @@
                     },
                     {
                         id: 3,
-                        course_img: 'assets/images/instrumentation.png',
+                        course_img: 'assets/images/human machine interface design and development.png',
                         author_name: 'Williams Jason',
-                        author_image: 'assets/images/instrumentation.png',
+                        author_image: 'assets/images/human machine interface design and development.png',
                         course_category: 'Industrial Automation',
                         course_name: 'Human Machine Interface Design & Development',
-                        course_time: '6 months',
+                        course_time: '7 weeks',
                         course_lectures: '6',
-                        course_sales_price:450.00,
+                        course_sales_price:110.00,
                         course_old_price: 600.00,
                         course_rating: 4.9,
                         certificate: 'yes',
@@ -1550,41 +1285,16 @@
                     },
                     {
                         id: 4,
-                        course_img: 'assets/images/courses/courses-02.jpg',
+                        course_img: 'assets/images/scada.png',
                         author_name: 'Williams Jason',
-                        author_image: 'assets/images/author/author-02.jpg',
+                        author_image: 'assets/images/scada.png',
                         course_category: 'Industrial Automation',
                         course_name: 'Scada System Implementation & Development',
-                        course_time: '6 months',
+                        course_time: '7 weeks',
                         course_lectures: '6',
-                        course_sales_price: 450.00,
+                        course_sales_price: 130.00,
                         course_old_price: 600.00,
                         course_rating: 4.9,
-                        structure: [
-                            {
-                                topic: 'Description',
-                                text: 'In this Course, you’ll begin with the front-end, move on to the back-end, then learn to connect the two. By the time you’re done, you’ll have the well-rounded skills needed to enter the job market.\n' +
-                                    'The goal of this 6-Months full-time program is to turn you into a fully operational Full Stack Web & App Developer. Graduates of this course typically find employment as Web Developers within a very short time frame.\n' +
-                                    'The lessons taught cover a diverse set of technologies which make for the perfect springboard onto the tech scene. As you acquire a deep understanding of modern web development, you will be primed to add more technologies, languages, and frameworks which will help you develop your career.If you don’t have the time to attend full-time, please check our part-time Web & App Development course!\n'
-                            },
-                            {
-                                topic: 'Curriculum',
-                                text: 'Our Curriculum helps you to become a ready-to-hire Full-Stack Web Application Developer in just 6 Months. After 3 Months of Virtual Classroom training, you will spend 3 Months on Project Based Learning where you will learn the fundamentals of participating in a real life project – In addition to HTML, CSS, and JavaScript, you will learn about the most innovative tech stack used in web development – including in-demand technologies like VueJs, ReactJS, Laravel & NodeJS.'
-                            },
-                            {
-                                topic: 'Cetificate',
-                                text: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularsed in the 1960 with release containing Lorem Ipsum passages desktop publishing software.'
-                            },  ],
-                        descriptions: [{
-                            topic: 'Cetificate',
-                            text: 'ncn djdx wsjn jxnwsjxn jsn sjn wsjxn wjnjwmnwjxnwjxnjnxjxw sjnx wn xwn wjn ncn djdx wsjn jxnwsjxn jsn sjn wsjxn wjnjwmnwjxnwjxnjnxjxw sjnx wn xwn wjn '
-                        }, {
-                            topic: 'Curriculum',
-                            text: 'ncn djdx wsjn jxnwsjxn jsn sjn wsjxn wjnjwmnwjxnwjxnjnxjxw sjnx wn xwn wjn ncn djdx wsjn jxnwsjxn jsn sjn wsjxn wjnjwmnwjxnwjxnjnxjxw sjnx wn xwn wjn '
-                        }, {
-                            topic: 'Description',
-                            text: 'ncn djdx wsjn jxnwsjxn jsn sjn wsjxn wjnjwmnwjxnwjxnjnxjxw sjnx wn xwn wjn ncn djdx wsjn jxnwsjxn jsn sjn wsjxn wjnjwmnwjxnwjxnjnxjxw sjnx wn xwn wjn '
-                        }, ],
                         certificate: 'yes',
                         language: 'English',
                         level: 'Secondary'
@@ -1635,10 +1345,10 @@
                         author_name: 'Mrs Imade',
                         author_image: 'assets/images/author/author-03.jpg',
                         course_category: 'Programming',
-                        course_name: 'Backend Specialist Course - laravel',
+                        course_name: 'Backend Development',
                         course_time: '6 months',
                         course_lectures: '6',
-                        course_sales_price: 450.00,
+                        course_sales_price: 250.00,
                         course_old_price: 600.00,
                         course_rating: 4.9,
                         certificate: 'yes',
@@ -1714,7 +1424,7 @@
                         course_name: 'Full Stack Mobile Programing & Development',
                         course_time: '6 months',
                         course_lectures: '6',
-                        course_sales_price: 450.00,
+                        course_sales_price: 400.00,
                         course_old_price: 600.00,
                         course_rating: 4.9,
                         certificate: 'yes',
@@ -1722,52 +1432,55 @@
                         level: 'Secondary'
                     },
 
+                    // {
+                    //     id: 9,
+                    //     course_img: 'assets/images/courses/courses-02.jpg',
+                    //     author_name: 'Williams Jason',
+                    //     author_image: 'assets/images/author/author-02.jpg',
+                    //     course_category: 'Programming',
+                    //     course_name: 'Backend Specalist Course - Node-js',
+                    //     course_time: '6 months',
+                    //     course_lectures: '6',
+                    //     course_sales_price: 400.00,
+                    //     course_old_price: 600.00,
+                    //     course_rating: 4.9,
+                    //     certificate: 'yes',
+                    //     language: 'English',
+                    //     level: 'Secondary'
+                    // },
                     {
-                        id: 9,
-                        course_img: 'assets/images/courses/courses-02.jpg',
-                        author_name: 'Williams Jason',
-                        author_image: 'assets/images/author/author-02.jpg',
-                        course_category: 'Programming',
-                        course_name: 'Backend Specalist Course - Node-js',
-                        course_time: '6 months',
-                        course_lectures: '6',
-                        course_sales_price: 400.00,
-                        course_old_price: 600.00,
-                        course_rating: 4.9,
-                        certificate: 'yes',
-                        language: 'English',
-                        level: 'Secondary'
-                    }, {
                         id: 10,
                         course_img: 'assets/images/courses/courses-03.jpg',
                         author_name: 'Williams Jason',
                         author_image: 'assets/images/author/author-03.jpg',
                         course_category: 'Programming',
-                        course_name: 'Frontend Specialist Course - React-js',
-                        course_time: '6 months',
+                        course_name: 'Frontend Development',
+                        course_time: '4 months',
                         course_lectures: '6',
-                        course_sales_price: 400.00,
+                        course_sales_price: 250.00,
                         course_old_price: 600.00,
                         course_rating: 4.9,
                         certificate: 'yes',
                         language: 'English',
                         level: 'Secondary'
-                    }, {
-                        id: 11,
-                        course_img: 'assets/images/courses/courses-02.jpg',
-                        author_name: 'Williams Jason',
-                        author_image: 'assets/images/author/author-02.jpg',
-                        course_category: 'Programming',
-                        course_name: 'Frontend Specialist Course Vue -js',
-                        course_time: '6 months',
-                        course_lectures: '6',
-                        course_sales_price: 400.00,
-                        course_old_price: 600.00,
-                        course_rating: 4.9,
-                        certificate: 'yes',
-                        language: 'English',
-                        level: 'Secondary'
-                    }, {
+                    },
+                    // {
+                    //     id: 11,
+                    //     course_img: 'assets/images/courses/courses-02.jpg',
+                    //     author_name: 'Williams Jason',
+                    //     author_image: 'assets/images/author/author-02.jpg',
+                    //     course_category: 'Programming',
+                    //     course_name: 'Frontend Specialist Course Vue -js',
+                    //     course_time: '6 months',
+                    //     course_lectures: '6',
+                    //     course_sales_price: 400.00,
+                    //     course_old_price: 600.00,
+                    //     course_rating: 4.9,
+                    //     certificate: 'yes',
+                    //     language: 'English',
+                    //     level: 'Secondary'
+                    // },
+                    {
                         id: 12,
                         course_img: 'assets/images/courses/courses-01.jpg',
                         author_name: 'Olu Head',
@@ -1782,22 +1495,39 @@
                         certificate: 'yes',
                         language: 'English',
                         level: 'Secondary'
-                    }, {
+                    },
+                    {
                         id: 13,
-                        course_img: 'assets/images/courses/courses-03.jpg',
-                        author_name: 'Mrs Imade',
-                        author_image: 'assets/images/author/author-03.jpg',
+                        course_img: 'assets/images/process control instrumentation.png',
+                        author_name: 'Williams Jason',
+                        author_image: 'assets/images/process control instrumentation.png',
                         course_category: 'Industrial Automation',
-                        course_name: 'Process Control Management & Instrumentation',
-                        course_time: '6 months',
+                        course_name: 'Process Control, Measurement And Instrumentation',
+                        course_time: '5 months',
                         course_lectures: '6',
-                        course_sales_price: 400.00,
+                        course_sales_price: 130.00,
                         course_old_price: 600.00,
                         course_rating: 4.9,
                         certificate: 'yes',
                         language: 'English',
                         level: 'Secondary'
                     },
+                    // {
+                    //     id: 13,
+                    //     course_img: 'assets/images/courses/courses-03.jpg',
+                    //     author_name: 'Mrs Imade',
+                    //     author_image: 'assets/images/author/author-03.jpg',
+                    //     course_category: 'Industrial Automation',
+                    //     course_name: 'Process Control Management & Instrumentation',
+                    //     course_time: '6 months',
+                    //     course_lectures: '6',
+                    //     course_sales_price: 400.00,
+                    //     course_old_price: 600.00,
+                    //     course_rating: 4.9,
+                    //     certificate: 'yes',
+                    //     language: 'English',
+                    //     level: 'Secondary'
+                    // },
 
                 ]
             },
