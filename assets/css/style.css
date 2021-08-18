@@ -19044,7 +19044,7 @@ only screen and (min-width: 1200px) and (max-width: 1599px) {
 .courses-tabs-menu .nav li button {
     width: 105%;
     height: 60px;
-    margin: 0px 100px 0px;
+
     border: 1px solid rgba(48, 146, 85, 0.2);
     border-radius: 10px;
     background-color: #fff;
@@ -19056,6 +19056,12 @@ only screen and (min-width: 1200px) and (max-width: 1599px) {
     transition: all 0.3s ease 0s;
     padding: 0 15px;
     white-space: nowrap;
+}
+
+@media screen and (min-width: 720px) {
+    .courses-tabs-menu .nav li button {
+        margin: 0px 100px 0px;
+    }
 }
 
 .courses-tabs-menu .nav li button.active,
