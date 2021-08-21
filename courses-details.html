@@ -15,12 +15,12 @@
 
     <!-- CSS
 	============================================ -->
-
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js "></script>
     <!-- Icon Font CSS -->
     <link rel="stylesheet" href="assets/css/plugins/icofont.min.css" />
     <link rel="stylesheet" href="assets/css/plugins/flaticon.css" />
     <link rel="stylesheet" href="assets/css/plugins/font-awesome.min.css" />
-    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js "></script>
+
     <script src="https://unpkg.com/axios/dist/axios.min.js "></script>
 
     <!-- Plugins CSS -->
@@ -350,17 +350,17 @@
 
         <!-- Page Banner Start -->
         <div class="section page-banner">
-<!--            <img class="shape-1 animation-round" src="assets/images/shape/shape-8.png" alt="Shape" />-->
+            <!--            <img class="shape-1 animation-round" src="assets/images/shape/shape-8.png" alt="Shape" />-->
             <img class="shape-2" src="assets/images/shape/shape-23.png" alt="Shape" />
 
             <div class="container">
                 <!-- Page Banner Start -->
                 <div class="page-banner-content">
-<!--                    <ul class="breadcrumb">-->
-<!--                        <li><a href="#">Home</a></li>-->
-<!--                        <li class="active">Courses Details</li>-->
-<!--                    </ul>-->
-                    <h5 class="title"> {{course.course_name}}<span> Details</span></h5>
+                    <!--                    <ul class="breadcrumb">-->
+                    <!--                        <li><a href="#">Home</a></li>-->
+                    <!--                        <li class="active">Courses Details</li>-->
+                    <!--                    </ul>-->
+                    <h5 class="title" v-if="course"> {{course.course_name}}<span> Details</span></h5>
                 </div>
                 <!-- Page Banner End -->
             </div>
@@ -410,11 +410,11 @@
                             <div class="courses-details-admin">
                                 <div class="admin-author">
                                     <div class="author-thumb">
-<!--                                        <img src="assets/images/author/author-01.jpg" alt="Author" />-->
+                                        <!--                                        <img src="assets/images/author/author-01.jpg" alt="Author" />-->
                                     </div>
                                     <div class="author-content">
-<!--                                        <a class="name" href="#" v-if="course">{{course.author_name}}</a>-->
-<!--                                        <span class="Enroll">286 Enrolled Students</span>-->
+                                        <!--                                        <a class="name" href="#" v-if="course">{{course.author_name}}</a>-->
+                                        <!--                                        <span class="Enroll">286 Enrolled Students</span>-->
                                     </div>
                                 </div>
                                 <div class="admin-rating">
@@ -460,7 +460,7 @@
                                     <div class="tab-content">
                                         <div class="tab-pane fade show active" id="description">
                                             <!-- Tab Description Start -->
-                                            <div class="tab-description">
+                                            <div class="tab-description" v-if="course">
                                                 <div class="description-wrapper" v-for="(description,index) in course.descriptions" :key="index">
                                                     <h3 class="tab-title">{{description.topic}}:</h3>
                                                     <p>
@@ -473,7 +473,7 @@
 
                                         <div class="tab-pane fade" id="instructors">
                                             <!-- Tab Instructors Start -->
-                                            <div class="tab-instructors">
+                                            <div class="tab-instructors" v-if="course">
                                                 <h3 class="tab-title mb-4">Course Structure:</h3>
 
                                                 <div class=" swipe_ col-md-12 p-3 mb-5" v-for="(structure,index) in course.structure" :key="index">
@@ -489,7 +489,7 @@
                                                                 </div>
                                                             </div>
                                                             <p class="pb-3">
-                                                               {{structure.text}}
+                                                                {{structure.text}}
                                                             </p>
                                                         </div>
 
@@ -500,38 +500,31 @@
                                                     <div class="mw-900">
                                                         <div class="col-md-12">
                                                             <h3 class="text-center textcap py-4 py-lg-5 mt-4">A typical week at Madesoft Academy</h3>
-                                                            <img  src="assets/images/madesoft_academy_timetable.png" class="img-fluid my-4"
-                                                                 alt="">
+                                                            <img src="assets/images/madesoft_academy_timetable.png" class="img-fluid my-4" alt="">
                                                             <ul class=" text-10  red-list pt-3 px-2 pt-2 pb-2" style="box-shadow: 0px 10px 30px 0px rgb(0 0 0 / 10%);">
-                                                                <li ><strong>Live Workshops:</strong> Physical Workshop to consolidate the learning will
-                                                                    be conducted in Batches. Due to widespread of our student a separate time table for Workshops and locations shall be communicated by Instructor.
+                                                                <li><strong>Live Workshops:</strong> Physical Workshop to consolidate the learning will be conducted in Batches. Due to widespread of our student a separate time table for Workshops and locations
+                                                                    shall be communicated by Instructor.
 
-                                                                <li ><strong>Virtual Classes:</strong> By illustrating concepts and the
-                                                                    real-time use-case demonstration Interact, mentors can lead you through live interactive lessons to develop a
-                                                                    sound understanding of concepts on a weekly basis.
-                                                                </li>
+                                                                    <li><strong>Virtual Classes:</strong> By illustrating concepts and the real-time use-case demonstration Interact, mentors can lead you through live interactive lessons to develop a sound
+                                                                        understanding of concepts on a weekly basis.
+                                                                    </li>
 
-                                                                <li ><strong>Structured Intervention:</strong>
-                                                                    Apply the learnings from Online Classrooms by designing tasks and projects of your own. This will be supported by
-                                                                    formal intervention sessions with our mentors which include task / assignment explainer and support.
-                                                                </li>
+                                                                    <li><strong>Structured Intervention:</strong> Apply the learnings from Online Classrooms by designing tasks and projects of your own. This will be supported by formal intervention sessions
+                                                                        with our mentors which include task / assignment explainer and support.
+                                                                    </li>
 
-                                                                <li ><strong>Individual Learning On LMS:</strong> Learn
-                                                                    predefined challenging content by yourself. This part will be carefully tailored to your personal progress. Also
-                                                                    the structured Intervention where you can reach out to your mentor in the case of any challenges.
-                                                                </li>
+                                                                    <li><strong>Individual Learning On LMS:</strong> Learn predefined challenging content by yourself. This part will be carefully tailored to your personal progress. Also the structured Intervention
+                                                                        where you can reach out to your mentor in the case of any challenges.
+                                                                    </li>
 
-                                                                <li ><strong>Personal Exercise/Assignments:</strong> Solve
-                                                                    predefined challenging Exercise/Assignment by yourself. Also the structured Intervention where you can
-                                                                    reach out to your mentor in the case of any challenges.
+                                                                    <li><strong>Personal Exercise/Assignments:</strong> Solve predefined challenging Exercise/Assignment by yourself. Also the structured Intervention where you can reach out to your mentor in
+                                                                        the case of any challenges.
 
-                                                                </li>
+                                                                    </li>
 
-                                                                <li data-aos="fade-right" data-aos-offset="150"><strong>Personal Lab Work:</strong> Solve
-                                                                    predefined challenging Lab work by yourself. Also the structured Intervention where you can
-                                                                    reach out to your mentor in the case of any challenges.
+                                                                    <li data-aos="fade-right" data-aos-offset="150"><strong>Personal Lab Work:</strong> Solve predefined challenging Lab work by yourself. Also the structured Intervention where you can reach out to your mentor in the case of any challenges.
 
-                                                                </li>
+                                                                    </li>
                                                             </ul>
 
                                                         </div>
@@ -550,8 +543,8 @@
 
                                                 <div class=" swipe_ col-md-12 p-5 mb-5" style="border-radius: 5px!important;">
                                                     <div>
-                                                        This program has a total cost of <span style="background: red; color: white">₦450,000</span>. Prior to the start of the course, fees must be paid. If necessary,
-                                                        payments can be paid in installments. For more information, please contact admin@madesoftacademy.com.
+                                                        This program has a total cost of <span style="background: red; color: white">₦450,000</span>. Prior to the start of the course, fees must be paid. If necessary, payments can be paid in installments.
+                                                        For more information, please contact admin@madesoftacademy.com.
                                                     </div>
                                                 </div>
 
@@ -563,7 +556,7 @@
 
                                         <div class="tab-pane fade" id="modules">
                                             <!-- Tab Reviews Start -->
-                                            <div class="tab-reviews" >
+                                            <div class="tab-reviews">
                                                 <h3 class="tab-title mb-5">Modules:</h3>
 
                                                 <div class="accordion accordion-flush" id="accordionFlushExample" style="box-shadow: 0px 10px 30px 0px rgb(0 0 0 / 10%);">
@@ -603,7 +596,7 @@
                                                         </h2>
                                                         <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
                                                             <div class="accordion-body">
-                                                                 <br>
+                                                                <br>
 
                                                                 <ul class="red-list_">
                                                                     <li>HMI Display Design,</li>
@@ -612,9 +605,7 @@
                                                                     <li>Alarm & Event Views,</li>
                                                                     <li> HMI Display Scripting,</li>
                                                                     <li>Introduction FactoryTalk,</li>
-                                                                    <li>Ignition & WinCC HMI Display Building Platforms <br>
-                                                                        Industrial Communication
-                                                                        EtherNet/IP Modbus,</li>
+                                                                    <li>Ignition & WinCC HMI Display Building Platforms <br> Industrial Communication EtherNet/IP Modbus,</li>
                                                                     <li> OPC, DeviceNet, ControlNet,</li>
                                                                     <li>Fieldbus – Intro, PROFIBUS-DP - Intro</li>
 
@@ -631,13 +622,13 @@
                                                         </h2>
                                                         <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
                                                             <div class="accordion-body">
-                                                            <ul class="red-list_">
-                                                                <li>Remote Telemetry Units (RTUs),</li>
-                                                                <li>Human Machine Interface,</li>
-                                                                <li>Communications Network,</li>
-                                                                <li>Introduction to Ignition SCADA,</li>
-                                                                <li>Introduction to Open Source SCADA</li>
-                                                            </ul>
+                                                                <ul class="red-list_">
+                                                                    <li>Remote Telemetry Units (RTUs),</li>
+                                                                    <li>Human Machine Interface,</li>
+                                                                    <li>Communications Network,</li>
+                                                                    <li>Introduction to Ignition SCADA,</li>
+                                                                    <li>Introduction to Open Source SCADA</li>
+                                                                </ul>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -649,9 +640,9 @@
                                                             </button>
                                                         </h2>
                                                         <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
-                                                            <div class="accordion-body">This module is intended to familiarize the student with the most important aspects
-                                                                of Distributed Control Systems. Topics covered in the module include DCS Controllers, DCS I/Os, HMIs & DCS Control Network.This module is intended to familiarize the student with the most important aspects of Distributed Control Systems.
-                                                                Topics covered in the module include DCS Controllers, DCS I/Os, HMIs & DCS Control Network.</div>
+                                                            <div class="accordion-body">This module is intended to familiarize the student with the most important aspects of Distributed Control Systems. Topics covered in the module include DCS Controllers, DCS I/Os, HMIs & DCS Control
+                                                                Network.This module is intended to familiarize the student with the most important aspects of Distributed Control Systems. Topics covered in the module include DCS Controllers, DCS I/Os,
+                                                                HMIs & DCS Control Network.</div>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -935,13 +926,39 @@
 
                     {
                         id: 1,
-                        course_img: 'assets/images/courses/courses-01.jpg',
+                        course_img: 'assets/images/industrial automation.png',
                         author_name: 'Williams Jason',
-                        author_image: 'assets/images/author/author-01.jpg',
+                        author_image: 'assets/images/industrial automation.png',
                         course_category: 'Industrial Automation',
-                        course_name: 'Full Stack Industrial Automation & PLCs Programming',
-                        course_time: '6 months',
-                        course_lectures: '29',
+                        course_name: 'Full Stack-Industrial Automation & PLCs Programming',
+                        slug: '?A001',
+                        course_time: '5 months',
+                        course_lectures: '6',
+                        structure: [{
+                                topic: '3 Months Intensive Lessons',
+                                text: 'This Program Consist of Online Virtual Classes, modularised lessons managed by Learning Management System with assignments, downloadable study materials and video lectures to fully engage the student on weekly basis.\n' +
+                                    'Student will be involved in lab work after each key concept is taught, ' +
+                                    'the lab work shall be in the form of practicals with guide from instructors, ' +
+                                    'each assignment and lab work shall be used as part of performance and assessment grading.\n'
+                            }, {
+                                topic: '3 Months Project Based Learning.',
+                                text: 'Student will gain knowledge and skills by working for 3 months to investigate and respond with a solution to an authentic industry related problem. Student shall engage with project management tools to enable them gain understanding of tasks, timelines, schedules with a project Manager assigned.\n' +
+                                    'The learning will mirror what professionals do every day and prepares the students to accept and meet challenges in the real world.\n'
+                            },
+
+                        ],
+                        descriptions: [{
+                            topic: 'Description',
+                            text: 'In this Course, you’ll begin with Programming PLCs, move on to the HMI & SCADA, then learn to connect the two. By the time you’re done, you’ll have the well-rounded skills needed to enter the job market.\n' +
+                                'The goal of this 6 Months full-time program is to turn you into a fully operational Full Stack Industrial Automation & PLCs Programmer. Graduates of this course typically find employment as Automation or PLCs Engineer within a very short time frame.\n' +
+                                'The lessons taught cover a diverse set of technologies which make for the perfect springboard onto the automation scene. The Full Stack Automation program provides an indept learning to Industrial Automation including digital electronic, programming of PLCs, Human Machine Interface (HMI) & SCADA systems.\n '
+                        }, {
+                            topic: 'Curriculum',
+                            text: 'Our Curriculum helps you to become a ready-to-hire Automation or PLCs Engineer in just 6 Months. After 3 Months of Virtual Classroom training, you will spend 3 Months on Project Based Learning where you will learn the fundamentals of participating in a real life project by working closely with your mentor – In addition you will learn using state the heart automation software.'
+                        }, {
+                            topic: 'Certification',
+                            text: 'Students will receive a verifiable and shareable certificate from the Academy upon completion of the course. Employers will be able to validate this certificate by using the student\'s unique identification number.'
+                        }, ],
                         course_sales_price: 450.00,
                         course_old_price: 600.00,
                         course_rating: 4.9,
@@ -952,62 +969,159 @@
 
                     {
                         id: 2,
-                        course_img: 'assets/images/courses/courses-02.jpg',
+                        course_img: 'assets/images/web programming.png',
                         author_name: 'Williams Jason',
-                        author_image: 'assets/images/author/author-02.jpg',
+                        author_image: 'assets/images/web programming.png',
+                        slug: '?A002',
                         course_category: 'Industrial Automation',
-                        course_name: 'Scada system implementation & development',
-                        course_time: '6 months',
-                        course_lectures: '29',
-                        course_sales_price: 450.00,
+                        course_name: 'Industrial Control Network Design',
+                        course_time: '7 weeks',
+                        course_lectures: '6',
+                        course_sales_price: 110.00,
                         course_old_price: 600.00,
                         course_rating: 4.9,
                         certificate: 'yes',
                         language: 'English',
+                        structure: [{
+                            topic: '3 Months Intensive Lessons',
+                            text: 'This Program Consist of Online Virtual Classes, modularised lessons managed by ' +
+                                'Learning Management System with assignments, downloadable study materials and video lectures ' +
+                                'to fully engage the student on weekly basis.',
+                            text: 'Student will be involved in lab work after each key concept is taught, ' +
+                                'the lab work shall be in the form of practicals with guide from instructors, \e' +
+                                'ach assignment and lab work shall be used as part of performance and assessment grading.'
+                        }, {
+                            topic: '3 Months Project Based Learning.',
+                            text: 'Student will gain knowledge and skills by working for 3 months to investigate and respond with a solution to an authentic industry related problem. Student shall engage with project management tools to enable them gain understanding of tasks, timelines, schedules with a project Manager assigned.\n' +
+                                'The learning will mirror what professionals do every day and prepares the students to accept and meet challenges in the real world.\n'
+                        }, ],
+                        descriptions: [{
+                            topic: 'Description',
+                            text: 'In this Course, you’ll begin with the front-end, move on to the back-end, then learn to connect the two. By the time you’re done, you’ll have the well-rounded skills needed to enter the job market.\n' +
+                                'The goal of this 6-Months full-time program is to turn you into a fully operational Full Stack Web & App Developer. Graduates of this course typically find employment as Web Developers within a very short time frame.\n' +
+                                'The lessons taught cover a diverse set of technologies which make for the perfect springboard onto the tech scene. As you acquire a deep understanding of modern web development, you will be primed to add more technologies, languages, and frameworks which will help you develop your career.If you don’t have the time to attend full-time, please check our part-time Web & App Development course!\n'
+                        }, {
+                            topic: 'Curriculum',
+                            text: 'Our Curriculum helps you to become a ready-to-hire Full-Stack Web Application Developer in just 6 Months. After 3 Months of Virtual Classroom training, you will spend 3 Months on Project Based Learning where you will learn the fundamentals of participating in a real life project – In addition to HTML, CSS, and JavaScript, you will learn about the most innovative tech stack used in web development – including in-demand technologies like VueJs, ReactJS, Laravel & NodeJS.'
+                        }, {
+                            topic: 'Cetificate',
+                            text: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularsed in the 1960 with release containing Lorem Ipsum passages desktop publishing software.'
+                        }, ],
                         level: 'Secondary'
                     }, {
                         id: 3,
-                        course_img: 'assets/images/courses/courses-03.jpg',
+                        course_img: 'assets/images/human machine interface design and development.png',
                         author_name: 'Williams Jason',
-                        author_image: 'assets/images/author/author-03.jpg',
+                        author_image: 'assets/images/human machine interface design and development.png',
                         course_category: 'Industrial Automation',
-                        course_name: 'Industrial control networking design & development',
-                        course_time: '6 months',
-                        course_lectures: '29',
-                        course_sales_price: 450.00,
+                        slug: '??A003',
+                        course_name: 'Human Machine Interface Design & Development',
+                        course_time: '7 weeks',
+                        course_lectures: '6',
+                        course_sales_price: 110.00,
                         course_old_price: 600.00,
                         course_rating: 4.9,
                         certificate: 'yes',
+                        structure: [{
+                            topic: 'Description',
+                            text: 'In this Course, you’ll begin with the front-end, move on to the back-end, then learn to connect the two. By the time you’re done, you’ll have the well-rounded skills needed to enter the job market.\n' +
+                                'The goal of this 6-Months full-time program is to turn you into a fully operational Full Stack Web & App Developer. Graduates of this course typically find employment as Web Developers within a very short time frame.\n' +
+                                'The lessons taught cover a diverse set of technologies which make for the perfect springboard onto the tech scene. As you acquire a deep understanding of modern web development, you will be primed to add more technologies, languages, and frameworks which will help you develop your career.If you don’t have the time to attend full-time, please check our part-time Web & App Development course!\n'
+                        }, {
+                            topic: 'Curriculum',
+                            text: 'Our Curriculum helps you to become a ready-to-hire Full-Stack Web Application Developer in just 6 Months. After 3 Months of Virtual Classroom training, you will spend 3 Months on Project Based Learning where you will learn the fundamentals of participating in a real life project – In addition to HTML, CSS, and JavaScript, you will learn about the most innovative tech stack used in web development – including in-demand technologies like VueJs, ReactJS, Laravel & NodeJS.'
+                        }, {
+                            topic: 'Cetificate',
+                            text: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularsed in the 1960 with release containing Lorem Ipsum passages desktop publishing software.'
+                        }, ],
+                        descriptions: [{
+                            topic: 'Cetificate',
+                            text: 'ncn djdx wsjn jxnwsjxn jsn sjn wsjxn wjnjwmnwjxnwjxnjnxjxw sjnx wn xwn wjn ncn djdx wsjn jxnwsjxn jsn sjn wsjxn wjnjwmnwjxnwjxnjnxjxw sjnx wn xwn wjn '
+                        }, {
+                            topic: 'Curriculum',
+                            text: 'ncn djdx wsjn jxnwsjxn jsn sjn wsjxn wjnjwmnwjxnwjxnjnxjxw sjnx wn xwn wjn ncn djdx wsjn jxnwsjxn jsn sjn wsjxn wjnjwmnwjxnwjxnjnxjxw sjnx wn xwn wjn '
+                        }, {
+                            topic: 'Description',
+                            text: 'ncn djdx wsjn jxnwsjxn jsn sjn wsjxn wjnjwmnwjxnwjxnjnxjxw sjnx wn xwn wjn ncn djdx wsjn jxnwsjxn jsn sjn wsjxn wjnjwmnwjxnwjxnjnxjxw sjnx wn xwn wjn '
+                        }, ],
                         language: 'English',
                         level: 'Secondary'
                     }, {
                         id: 4,
-                        course_img: 'assets/images/courses/courses-02.jpg',
+                        course_img: 'assets/images/scada.png',
                         author_name: 'Williams Jason',
-                        author_image: 'assets/images/author/author-02.jpg',
-                        course_category: 'Programming',
-                        course_name: 'Full Stack Web Programming & Development',
-                        course_time: '6 months',
-                        course_lectures: '29',
-                        course_sales_price: 450.00,
+                        slug: '?A004',
+                        author_image: 'assets/images/scada.png',
+                        course_category: 'Industrial Automation',
+                        course_name: 'Scada System Implementation & Development',
+                        course_time: '7 weeks',
+                        course_lectures: '6',
+                        course_sales_price: 130.00,
                         course_old_price: 600.00,
+                        structure: [{
+                                topic: '3 Months Intensive Lessons',
+                                text: 'This Program Consist of Online Virtual Classes, modularised lessons managed by Learning Management System with assignments, downloadable study materials and video lectures to fully engage the student on weekly basis.\n' +
+                                    'Student will be involved in lab work after each key concept is taught, ' +
+                                    'the lab work shall be in the form of practicals with guide from instructors, ' +
+                                    'each assignment and lab work shall be used as part of performance and assessment grading.\n'
+                            }, {
+                                topic: '3 Months Project Based Learning.',
+                                text: 'Student will gain knowledge and skills by working for 3 months to investigate and respond with a solution to an authentic industry related problem. Student shall engage with project management tools to enable them gain understanding of tasks, timelines, schedules with a project Manager assigned.\n' +
+                                    'The learning will mirror what professionals do every day and prepares the students to accept and meet challenges in the real world.\n'
+                            },
+
+                        ],
+                        descriptions: [{
+                            topic: 'Description',
+                            text: 'In this Course, you’ll begin with Programming PLCs, move on to the HMI & SCADA, then learn to connect the two. By the time you’re done, you’ll have the well-rounded skills needed to enter the job market.\n' +
+                                'The goal of this 6 Months full-time program is to turn you into a fully operational Full Stack Industrial Automation & PLCs Programmer. Graduates of this course typically find employment as Automation or PLCs Engineer within a very short time frame.\n' +
+                                'The lessons taught cover a diverse set of technologies which make for the perfect springboard onto the automation scene. The Full Stack Automation program provides an indept learning to Industrial Automation including digital electronic, programming of PLCs, Human Machine Interface (HMI) & SCADA systems.\n '
+                        }, {
+                            topic: 'Curriculum',
+                            text: 'Our Curriculum helps you to become a ready-to-hire Automation or PLCs Engineer in just 6 Months. After 3 Months of Virtual Classroom training, you will spend 3 Months on Project Based Learning where you will learn the fundamentals of participating in a real life project by working closely with your mentor – In addition you will learn using state the heart automation software.'
+                        }, {
+                            topic: 'Certification',
+                            text: 'Students will receive a verifiable and shareable certificate from the Academy upon completion of the course. Employers will be able to validate this certificate by using the student\'s unique identification number.'
+                        }, ],
                         course_rating: 4.9,
                         certificate: 'yes',
                         language: 'English',
                         level: 'Secondary'
                     }, {
                         id: 5,
-                        course_img: 'assets/images/courses/courses-01.jpg',
+                        course_img: 'assets/images/web programming.png',
                         author_name: 'Olu Head',
-                        author_image: 'assets/images/author/author-01.jpg',
+                        slug: '?A005',
+                        author_image: 'assets/images/web programming.png',
                         course_category: 'Programming',
-                        course_name: 'Backend Specialist Course - laravel',
+                        course_name: 'Full Stack Web Programming & Development',
                         course_time: '6 months',
-                        course_lectures: '22',
-                        course_sales_price: 450.00,
+                        course_lectures: '6',
+                        course_sales_price: 400.00,
                         course_old_price: 600.00,
                         course_rating: 4.9,
                         certificate: 'yes',
+                        structure: [{
+                            topic: '3 Months Intensive Lessons',
+                            text: 'This Program Consist of Online Virtual Classes, modularised lessons managed by Learning Management System with assignments, downloadable study materials and video lectures to fully engage the student on weekly basis.This Program Consist of Online Virtual Classes, modularised lessons managed by Learning Management System with assignments, downloadable study materials and video lectures to fully engage the student on weekly basis. ' +
+                                'Student will be involved in lab work after each key concept is taught, the lab work shall be in the form of practicals with guide from instructors, each assignment and lab work shall be used as part of performance and assessment grading.'
+                        }, {
+                            topic: '3 Months Project Based Learning.3 Months Project Based Learning.',
+                            text: 'Student will gain knowledge and skills by working for 3 months to investigate and respond with a solution to an authentic industry related problem. Student shall engage with project management tools to enable them gain understanding of tasks, timelines, schedules with a project Manager assigned.\n' +
+                                'The learning will mirror what professionals do every day and prepares the students to accept and meet challenges in the real world.\n'
+                        }, ],
+                        descriptions: [{
+                            topic: 'Description',
+                            text: 'In this Course, you’ll begin with the front-end, move on to the back-end, then learn to connect the two. By the time you’re done, you’ll have the well-rounded skills needed to enter the job market.\n' +
+                                'The goal of this 6-Months full-time program is to turn you into a fully operational Full Stack Web & App Developer. Graduates of this course typically find employment as Web Developers within a very short time frame.\n' +
+                                'The lessons taught cover a diverse set of technologies which make for the perfect springboard onto the tech scene. As you acquire a deep understanding of modern web development, you will be primed to add more technologies, languages, and frameworks which will help you develop your career.If you don’t have the time to attend full-time, please check our part-time Web & App Development course!\n'
+                        }, {
+                            topic: 'Curriculum ',
+                            text: 'Our Curriculum helps you to become a ready-to-hire Full-Stack Web Application Developer in just 6 Months. After 3 Months of Virtual Classroom training, you will spend 3 Months on Project Based Learning where you will learn the fundamentals of participating in a real life project – In addition to HTML, CSS, and JavaScript, you will learn about the most innovative tech stack used in web development – including in-demand technologies like VueJs, ReactJS, Laravel & NodeJS.'
+                        }, {
+                            topic: 'Cetificate',
+                            text: 'ncn djdx wsjn jxnwsjxn jsn sjn wsjxn wjnjwmnwjxnwjxnjnxjxw sjnx wn xwn wjn ncn djdx wsjn jxnwsjxn jsn sjn wsjxn wjnjwmnwjxnwjxnjnxjxw sjnx wn xwn wjn '
+                        }, ],
                         language: 'English',
                         level: 'Secondary'
                     }, {
@@ -1016,97 +1130,284 @@
                         author_name: 'Mrs Imade',
                         author_image: 'assets/images/author/author-03.jpg',
                         course_category: 'Programming',
-                        course_name: 'Full Stack Mobile Programing & Development',
+                        slug: '?A006',
+                        course_name: 'Backend Development',
                         course_time: '6 months',
-                        course_lectures: '25',
-                        course_sales_price: 450.00,
+                        course_lectures: '6',
+                        course_sales_price: 250.00,
                         course_old_price: 600.00,
                         course_rating: 4.9,
                         certificate: 'yes',
-                        language: 'English',
-                        level: 'Secondary'
-                    },
-                    {
-                        id: 7,
-                        course_img: 'assets/images/courses/courses-03.jpg',
-                        author_name: 'Mrs Imade',
-                        author_image: 'assets/images/author/author-03.jpg',
-                        course_category: 'Programming',
-                        course_name: 'Backend Specalist Course - Node-jst',
-                        course_time: '6 months',
-                        course_lectures: '25',
-                        course_sales_price: 450.00,
-                        course_old_price: 600.00,
-                        course_rating: 4.9,
-                        certificate: 'yes',
-                        language: 'English',
-                        level: 'Secondary'
-                    },
-                    {
-                        id: 8,
-                        course_img: 'assets/images/courses/courses-03.jpg',
-                        author_name: 'Mrs Imade',
-                        author_image: 'assets/images/author/author-03.jpg',
-                        course_category: 'Programming',
-                        course_name: 'Frontend Specialist Course - React-js',
-                        course_time: '6 months',
-                        course_lectures: '25',
-                        course_sales_price: 450.00,
-                        course_old_price: 600.00,
-                        course_rating: 4.9,
-                        certificate: 'yes',
-                        language: 'English',
-                        level: 'Secondary'
-                    },
-                    {
-                        id: 9,
-                        course_img: 'assets/images/courses/courses-03.jpg',
-                        author_name: 'Mrs Imade',
-                        author_image: 'assets/images/author/author-03.jpg',
-                        course_category: 'Programming',
-                        course_name: 'Frontend Specialist Course Vue -js',
-                        course_time: '6 months',
-                        course_lectures: '25',
-                        course_sales_price: 450.00,
-                        course_old_price: 600.00,
-                        course_rating: 4.9,
-                        certificate: 'yes',
-                        language: 'English',
-                        level: 'Secondary'
-                    },
-                    {
-                        id: 10,
-                        course_img: 'assets/images/courses/courses-03.jpg',
-                        author_name: 'Mrs Imade',
-                        author_image: 'assets/images/author/author-03.jpg',
-                        course_category: 'Industrial Automation',
-                        course_name: 'Fullstack Iot & Embedded System Development',
-                        course_time: '6 months',
-                        course_lectures: '25',
-                        course_sales_price: 450.00,
-                        course_old_price: 600.00,
-                        course_rating: 4.9,
-                        certificate: 'yes',
-                        language: 'English',
-                        level: 'Secondary'
-                    },
-                    {
-                        id: 10,
-                        course_img: 'assets/images/courses/courses-03.jpg',
-                        author_name: 'Mrs Imade',
-                        author_image: 'assets/images/author/author-03.jpg',
-                        course_category: 'Industrial Automation',
-                        course_name: 'Process Control Management & Instrumentation',
-                        course_time: '6 months',
-                        course_lectures: '25',
-                        course_sales_price: 450.00,
-                        course_old_price: 600.00,
-                        course_rating: 4.9,
-                        certificate: 'yes',
+                        structure: [{
+                            topic: 'Description',
+                            text: 'In this Course, you’ll begin with the front-end, move on to the back-end, then learn to connect the two. By the time you’re done, you’ll have the well-rounded skills needed to enter the job market.\n' +
+                                'The goal of this 6-Months full-time program is to turn you into a fully operational Full Stack Web & App Developer. Graduates of this course typically find employment as Web Developers within a very short time frame.\n' +
+                                'The lessons taught cover a diverse set of technologies which make for the perfect springboard onto the tech scene. As you acquire a deep understanding of modern web development, you will be primed to add more technologies, languages, and frameworks which will help you develop your career.If you don’t have the time to attend full-time, please check our part-time Web & App Development course!\n'
+                        }, {
+                            topic: 'Curriculum',
+                            text: 'Our Curriculum helps you to become a ready-to-hire Full-Stack Web Application Developer in just 6 Months. After 3 Months of Virtual Classroom training, you will spend 3 Months on Project Based Learning where you will learn the fundamentals of participating in a real life project – In addition to HTML, CSS, and JavaScript, you will learn about the most innovative tech stack used in web development – including in-demand technologies like VueJs, ReactJS, Laravel & NodeJS.'
+                        }, ],
+                        descriptions: [{
+                            topic: 'Cetificate',
+                            text: 'ncn djdx wsjn jxnwsjxn jsn sjn wsjxn wjnjwmnwjxnwjxnjnxjxw sjnx wn xwn wjn ncn djdx wsjn jxnwsjxn jsn sjn wsjxn wjnjwmnwjxnwjxnjnxjxw sjnx wn xwn wjn '
+                        }, {
+                            topic: 'Curriculum',
+                            text: 'ncn djdx wsjn jxnwsjxn jsn sjn wsjxn wjnjwmnwjxnwjxnjnxjxw sjnx wn xwn wjn ncn djdx wsjn jxnwsjxn jsn sjn wsjxn wjnjwmnwjxnwjxnjnxjxw sjnx wn xwn wjn '
+                        }, {
+                            topic: 'Description',
+                            text: 'ncn djdx wsjn jxnwsjxn jsn sjn wsjxn wjnjwmnwjxnwjxnjnxjxw sjnx wn xwn wjn ncn djdx wsjn jxnwsjxn jsn sjn wsjxn wjnjwmnwjxnwjxnjnxjxw sjnx wn xwn wjn '
+                        }, ],
                         language: 'English',
                         level: 'Secondary'
                     },
 
+
+                    {
+                        id: 6,
+                        course_img: 'assets/images/coming soon.png',
+                        author_name: 'Mrs Imade',
+                        author_image: 'assets/images/author/author-03.jpg',
+                        course_category: 'Data Science',
+                        course_name: '  Coming Soon',
+                    }, {
+                        id: 6,
+                        course_img: 'assets/images/coming soon.png',
+                        author_name: 'Mrs Imade',
+                        author_image: 'assets/images/author/author-03.jpg',
+                        course_category: 'Cyber Security',
+                        course_name: '  Coming Soon',
+                    }, {
+                        id: 6,
+                        course_img: 'assets/images/coming soon.png',
+                        author_name: 'Mrs Imade',
+                        author_image: 'assets/images/author/author-03.jpg',
+                        course_category: 'Financial',
+                        course_name: '  Coming Soon',
+                    }, {
+                        id: 6,
+                        course_img: 'assets/images/coming soon.png',
+                        author_name: 'Mrs Imade',
+                        author_image: 'assets/images/author/author-03.jpg',
+                        course_category: 'Marketing',
+                        course_name: '  Coming Soon',
+                    },
+
+                    {
+                        id: 8,
+                        course_img: 'assets/images/courses/courses-01.jpg',
+                        author_name: 'Williams Jason',
+                        author_image: 'assets/images/author/author-01.jpg',
+                        course_category: 'Programming',
+                        course_name: 'Full Stack Mobile Programing & Development',
+                        slug: '?A008',
+                        course_time: '6 months',
+                        course_lectures: '6',
+                        course_sales_price: 400.00,
+                        course_old_price: 600.00,
+                        course_rating: 4.9,
+                        certificate: 'yes',
+                        structure: [{
+                                topic: '3 Months Intensive Lessons',
+                                text: 'This Program Consist of Online Virtual Classes, modularised lessons managed by Learning Management System with assignments, downloadable study materials and video lectures to fully engage the student on weekly basis.\n' +
+                                    'Student will be involved in lab work after each key concept is taught, ' +
+                                    'the lab work shall be in the form of practicals with guide from instructors, ' +
+                                    'each assignment and lab work shall be used as part of performance and assessment grading.\n'
+                            }, {
+                                topic: '3 Months Project Based Learning.',
+                                text: 'Student will gain knowledge and skills by working for 3 months to investigate and respond with a solution to an authentic industry related problem. Student shall engage with project management tools to enable them gain understanding of tasks, timelines, schedules with a project Manager assigned.\n' +
+                                    'The learning will mirror what professionals do every day and prepares the students to accept and meet challenges in the real world.\n'
+                            },
+
+                        ],
+                        descriptions: [{
+                            topic: 'Description',
+                            text: 'In this Course, you’ll begin with Programming PLCs, move on to the HMI & SCADA, then learn to connect the two. By the time you’re done, you’ll have the well-rounded skills needed to enter the job market.\n' +
+                                'The goal of this 6 Months full-time program is to turn you into a fully operational Full Stack Industrial Automation & PLCs Programmer. Graduates of this course typically find employment as Automation or PLCs Engineer within a very short time frame.\n' +
+                                'The lessons taught cover a diverse set of technologies which make for the perfect springboard onto the automation scene. The Full Stack Automation program provides an indept learning to Industrial Automation including digital electronic, programming of PLCs, Human Machine Interface (HMI) & SCADA systems.\n '
+                        }, {
+                            topic: 'Curriculum',
+                            text: 'Our Curriculum helps you to become a ready-to-hire Automation or PLCs Engineer in just 6 Months. After 3 Months of Virtual Classroom training, you will spend 3 Months on Project Based Learning where you will learn the fundamentals of participating in a real life project by working closely with your mentor – In addition you will learn using state the heart automation software.'
+                        }, {
+                            topic: 'Certification',
+                            text: 'Students will receive a verifiable and shareable certificate from the Academy upon completion of the course. Employers will be able to validate this certificate by using the student\'s unique identification number.'
+                        }, ],
+                        language: 'English',
+                        level: 'Secondary'
+                    },
+
+                    // {
+                    //     id: 9,
+                    //     course_img: 'assets/images/courses/courses-02.jpg',
+                    //     author_name: 'Williams Jason',
+                    //     author_image: 'assets/images/author/author-02.jpg',
+                    //     course_category: 'Programming',
+                    //     course_name: 'Backend Specalist Course - Node-js',
+                    //     course_time: '6 months',
+                    //     course_lectures: '6',
+                    //     course_sales_price: 400.00,
+                    //     course_old_price: 600.00,
+                    //     course_rating: 4.9,
+                    //     certificate: 'yes',
+                    //     language: 'English',
+                    //     level: 'Secondary'
+                    // },
+                    {
+                        id: 10,
+                        course_img: 'assets/images/courses/courses-03.jpg',
+                        author_name: 'Williams Jason',
+                        author_image: 'assets/images/author/author-03.jpg',
+                        course_category: 'Programming',
+                        slug: '?A009',
+                        course_name: 'Frontend Development',
+                        course_time: '4 months',
+                        course_lectures: '6',
+                        course_sales_price: 250.00,
+                        course_old_price: 600.00,
+                        course_rating: 4.9,
+                        structure: [{
+                                topic: '3 Months Intensive Lessons',
+                                text: 'This Program Consist of Online Virtual Classes, modularised lessons managed by Learning Management System with assignments, downloadable study materials and video lectures to fully engage the student on weekly basis.\n' +
+                                    'Student will be involved in lab work after each key concept is taught, ' +
+                                    'the lab work shall be in the form of practicals with guide from instructors, ' +
+                                    'each assignment and lab work shall be used as part of performance and assessment grading.\n'
+                            }, {
+                                topic: '3 Months Project Based Learning.',
+                                text: 'Student will gain knowledge and skills by working for 3 months to investigate and respond with a solution to an authentic industry related problem. Student shall engage with project management tools to enable them gain understanding of tasks, timelines, schedules with a project Manager assigned.\n' +
+                                    'The learning will mirror what professionals do every day and prepares the students to accept and meet challenges in the real world.\n'
+                            },
+
+                        ],
+                        descriptions: [{
+                            topic: 'Description',
+                            text: 'In this Course, you’ll begin with Programming PLCs, move on to the HMI & SCADA, then learn to connect the two. By the time you’re done, you’ll have the well-rounded skills needed to enter the job market.\n' +
+                                'The goal of this 6 Months full-time program is to turn you into a fully operational Full Stack Industrial Automation & PLCs Programmer. Graduates of this course typically find employment as Automation or PLCs Engineer within a very short time frame.\n' +
+                                'The lessons taught cover a diverse set of technologies which make for the perfect springboard onto the automation scene. The Full Stack Automation program provides an indept learning to Industrial Automation including digital electronic, programming of PLCs, Human Machine Interface (HMI) & SCADA systems.\n '
+                        }, {
+                            topic: 'Curriculum',
+                            text: 'Our Curriculum helps you to become a ready-to-hire Automation or PLCs Engineer in just 6 Months. After 3 Months of Virtual Classroom training, you will spend 3 Months on Project Based Learning where you will learn the fundamentals of participating in a real life project by working closely with your mentor – In addition you will learn using state the heart automation software.'
+                        }, {
+                            topic: 'Certification',
+                            text: 'Students will receive a verifiable and shareable certificate from the Academy upon completion of the course. Employers will be able to validate this certificate by using the student\'s unique identification number.'
+                        }, ],
+                        certificate: 'yes',
+                        language: 'English',
+                        level: 'Secondary'
+                    },
+                    // {
+                    //     id: 11,
+                    //     course_img: 'assets/images/courses/courses-02.jpg',
+                    //     author_name: 'Williams Jason',
+                    //     author_image: 'assets/images/author/author-02.jpg',
+                    //     course_category: 'Programming',
+                    //     course_name: 'Frontend Specialist Course Vue -js',
+                    //     course_time: '6 months',
+                    //     course_lectures: '6',
+                    //     course_sales_price: 400.00,
+                    //     course_old_price: 600.00,
+                    //     course_rating: 4.9,
+                    //     certificate: 'yes',
+                    //     language: 'English',
+                    //     level: 'Secondary'
+                    // },
+                    {
+                        id: 12,
+                        course_img: 'assets/images/iot development.png',
+                        author_name: 'Olu Head',
+                        author_image: 'assets/images/iot development.png',
+                        slug: '?A0010',
+                        course_category: 'Industrial Automation',
+                        course_name: 'Fullstack Iot & Embedded System Development',
+                        course_time: '6 months',
+                        course_lectures: '6',
+                        course_sales_price: 400.00,
+                        course_old_price: 600.00,
+                        course_rating: 4.9,
+                        structure: [{
+                                topic: '3 Months Intensive Lessons',
+                                text: 'This Program Consist of Online Virtual Classes, modularised lessons managed by Learning Management System with assignments, downloadable study materials and video lectures to fully engage the student on weekly basis.\n' +
+                                    'Student will be involved in lab work after each key concept is taught, ' +
+                                    'the lab work shall be in the form of practicals with guide from instructors, ' +
+                                    'each assignment and lab work shall be used as part of performance and assessment grading.\n'
+                            }, {
+                                topic: '3 Months Project Based Learning.',
+                                text: 'Student will gain knowledge and skills by working for 3 months to investigate and respond with a solution to an authentic industry related problem. Student shall engage with project management tools to enable them gain understanding of tasks, timelines, schedules with a project Manager assigned.\n' +
+                                    'The learning will mirror what professionals do every day and prepares the students to accept and meet challenges in the real world.\n'
+                            },
+
+                        ],
+                        descriptions: [{
+                            topic: 'Description',
+                            text: 'In this Course, you’ll begin with Programming PLCs, move on to the HMI & SCADA, then learn to connect the two. By the time you’re done, you’ll have the well-rounded skills needed to enter the job market.\n' +
+                                'The goal of this 6 Months full-time program is to turn you into a fully operational Full Stack Industrial Automation & PLCs Programmer. Graduates of this course typically find employment as Automation or PLCs Engineer within a very short time frame.\n' +
+                                'The lessons taught cover a diverse set of technologies which make for the perfect springboard onto the automation scene. The Full Stack Automation program provides an indept learning to Industrial Automation including digital electronic, programming of PLCs, Human Machine Interface (HMI) & SCADA systems.\n '
+                        }, {
+                            topic: 'Curriculum',
+                            text: 'Our Curriculum helps you to become a ready-to-hire Automation or PLCs Engineer in just 6 Months. After 3 Months of Virtual Classroom training, you will spend 3 Months on Project Based Learning where you will learn the fundamentals of participating in a real life project by working closely with your mentor – In addition you will learn using state the heart automation software.'
+                        }, {
+                            topic: 'Certification',
+                            text: 'Students will receive a verifiable and shareable certificate from the Academy upon completion of the course. Employers will be able to validate this certificate by using the student\'s unique identification number.'
+                        }, ],
+                        certificate: 'yes',
+                        language: 'English',
+                        level: 'Secondary'
+                    }, {
+                        id: 13,
+                        course_img: 'assets/images/process control instrumentation.png',
+                        author_name: 'Williams Jason',
+                        author_image: 'assets/images/process control instrumentation.png',
+                        course_category: 'Industrial Automation',
+                        slug: '?A0011',
+                        course_name: 'Process Control, Measurement And Instrumentation',
+                        course_time: '5 months',
+                        course_lectures: '6',
+                        course_sales_price: 130.00,
+                        course_old_price: 600.00,
+                        course_rating: 4.9,
+                        certificate: 'yes',
+                        structure: [{
+                                topic: '3 Months Intensive Lessons',
+                                text: 'This Program Consist of Online Virtual Classes, modularised lessons managed by Learning Management System with assignments, downloadable study materials and video lectures to fully engage the student on weekly basis.\n' +
+                                    'Student will be involved in lab work after each key concept is taught, ' +
+                                    'the lab work shall be in the form of practicals with guide from instructors, ' +
+                                    'each assignment and lab work shall be used as part of performance and assessment grading.\n'
+                            }, {
+                                topic: '3 Months Project Based Learning.',
+                                text: 'Student will gain knowledge and skills by working for 3 months to investigate and respond with a solution to an authentic industry related problem. Student shall engage with project management tools to enable them gain understanding of tasks, timelines, schedules with a project Manager assigned.\n' +
+                                    'The learning will mirror what professionals do every day and prepares the students to accept and meet challenges in the real world.\n'
+                            },
+
+                        ],
+                        descriptions: [{
+                            topic: 'Description',
+                            text: 'In this Course, you’ll begin with Programming PLCs, move on to the HMI & SCADA, then learn to connect the two. By the time you’re done, you’ll have the well-rounded skills needed to enter the job market.\n' +
+                                'The goal of this 6 Months full-time program is to turn you into a fully operational Full Stack Industrial Automation & PLCs Programmer. Graduates of this course typically find employment as Automation or PLCs Engineer within a very short time frame.\n' +
+                                'The lessons taught cover a diverse set of technologies which make for the perfect springboard onto the automation scene. The Full Stack Automation program provides an indept learning to Industrial Automation including digital electronic, programming of PLCs, Human Machine Interface (HMI) & SCADA systems.\n '
+                        }, {
+                            topic: 'Curriculum',
+                            text: 'Our Curriculum helps you to become a ready-to-hire Automation or PLCs Engineer in just 6 Months. After 3 Months of Virtual Classroom training, you will spend 3 Months on Project Based Learning where you will learn the fundamentals of participating in a real life project by working closely with your mentor – In addition you will learn using state the heart automation software.'
+                        }, {
+                            topic: 'Certification',
+                            text: 'Students will receive a verifiable and shareable certificate from the Academy upon completion of the course. Employers will be able to validate this certificate by using the student\'s unique identification number.'
+                        }, ],
+                        language: 'English',
+                        level: 'Secondary'
+                    },
+                    // {
+                    //     id: 13,
+                    //     course_img: 'assets/images/courses/courses-03.jpg',
+                    //     author_name: 'Mrs Imade',
+                    //     author_image: 'assets/images/author/author-03.jpg',
+                    //     course_category: 'Industrial Automation',
+                    //     course_name: 'Process Control Management & Instrumentation',
+                    //     course_time: '6 months',
+                    //     course_lectures: '6',
+                    //     course_sales_price: 400.00,
+                    //     course_old_price: 600.00,
+                    //     course_rating: 4.9,
+                    //     certificate: 'yes',
+                    //     language: 'English',
+                    //     level: 'Secondary'
+                    // },
 
                 ],
                 categories: [{
@@ -1131,11 +1432,33 @@
                     let found = this.original_courses.filter(course => course.course_category == value)
                     return found
                 },
+                setId(course) {
+                    localStorage.setItem('course', JSON.stringify(course))
+                },
                 search() {
-                    let data = localStorage.getItem('courses') ? JSON.parse(localStorage.getItem('courses')) : ''
+                    let data = localStorage.getItem('courses') ? JSON.parse(localStorage.getItem('courses')) : localStorage.setItem('courses', JSON.stringify(this.original_courses))
                     let course = localStorage.getItem('course') ? JSON.parse(localStorage.getItem('course')) : ''
-                    this.courses = data
-                    this.course = course
+                    if (course && location.search) {
+                        let found = this.original_courses.find(cours => cours.id == course.id)
+                        return this.course = found
+                    } else if (course && !location.search) {
+                        console.log(course)
+                        alert('there is course')
+                        location.search = course.slug
+                        let found = this.original_courses.find(cours => cours.id == course.id)
+                        return this.course = found
+                    } else if (!course && location.search) {
+                        let word = location.search
+                        let found = this.original_courses.filter(cours => cours.slug == word
+                            // console.log(cours.course_name, '=', word)
+                        )
+                        console.log(found, 'course')
+                        return this.course = found
+                    } else if (!course && !location.search) {
+                        alert('not course and no location')
+                        console.log(location)
+                        location.assign('http://127.0.0.1:5500/index.html')
+                    }
                 },
 
             },
