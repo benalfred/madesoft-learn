@@ -11,17 +11,15 @@
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <!-- Favicon -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js "></script>
     <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.ico" />
 
     <!-- CSS
 	============================================ -->
-    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js "></script>
     <!-- Icon Font CSS -->
     <link rel="stylesheet" href="assets/css/plugins/icofont.min.css" />
     <link rel="stylesheet" href="assets/css/plugins/flaticon.css" />
     <link rel="stylesheet" href="assets/css/plugins/font-awesome.min.css" />
-
-    <script src="https://unpkg.com/axios/dist/axios.min.js "></script>
 
     <!-- Plugins CSS -->
     <link rel="stylesheet" href="assets/css/plugins/animate.min.css" />
@@ -107,8 +105,7 @@
                                         <li v-for="cat in categories" :key="cat.id">
                                             <a href="#">{{cat.name}}</a>
                                             <ul class="sub-menu" v-if="searchProductToDisplay(cat.name).length">
-                                                <li v-for="sub in searchProductToDisplay(cat.name)" :key="sub.id" @click="setId(sub)">
-                                                    <a href="courses-details.html">{{sub.course_name}}</a>
+                                                <li v-for="sub in searchProductToDisplay(cat.name)" :key="sub.id" @click="setId(sub)" v-html="link(sub)">
                                                 </li>
                                                 <!-- <li><a href="blog-left-sidebar.html">Instrumentation</a></li>
                                                 <li><a href="blog-right-sidebar.html">Internet of things</a></li> -->
@@ -666,7 +663,8 @@
                             <!-- Sidebar Widget Information Start -->
                             <div class="sidebar-widget widget-information">
                                 <div class="info-price">
-                                    <span class="price">₦{{course.course_sales_price}}.000</span>
+                                    <span class="price">₦{{course.course_sales_price.toString()
+                                        .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}}</span>
                                 </div>
                                 <div class="info-list">
                                     <ul>
@@ -969,6 +967,9 @@
                 setId(course) {
                     localStorage.setItem('course', JSON.stringify(course))
                 },
+                link(value) {
+                    return `<a href="/courses-details.html?${value.slug}">${value.course_name}</a>`
+                },
                 search() {
                     let course = localStorage.getItem('course') ? JSON.parse(localStorage.getItem('course')) : ''
                     if (course && location.search) {
@@ -978,10 +979,7 @@
                         found ? this.course = found : location.assign(`${this.host}/programs.html`)
                         return
                     } else if (course && !location.search) {
-                        location.search = course.slug
-                        let found = this.original_courses.find(cours => cours.id == course.id)
-                        found ? this.course = found : location.assign(`${this.host}/programs.html`)
-                        return
+                        return location.assign(`${this.host}/programs.html`)
                     } else if (!course && location.search) {
                         let word = location.search
                         word = word.replace("?", "")
