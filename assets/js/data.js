@@ -135,7 +135,7 @@ let courses = [
         code: 'A003',
         author_image: 'assets/images/scada.png',
         course_category: 'Industrial Automation',
-        course_name: 'Scada-System-Implementation-&-Development',
+        course_name: 'Scada System Implementation & Development',
         course_time: '7 weeks',
         course_lectures: '6',
         course_sales_price: 130000,
