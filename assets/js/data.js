@@ -500,10 +500,10 @@ let courses = [
 
 
 let cat = [{
-        name: 'Industrial Automation',
+        name: 'Programming',
         id: '1',
     }, {
-        name: 'Programming',
+        name: 'Industrial Automation',
         id: '2',
     }, {
         name: 'Data Science',
