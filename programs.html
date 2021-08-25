@@ -108,8 +108,7 @@
                                         <li v-for="cat in categories" :key="cat.id">
                                             <a href="#">{{cat.name}}</a>
                                             <ul class="sub-menu" v-if="searchProductToDisplay(cat.name).length">
-                                                <li v-for="sub in searchProductToDisplay(cat.name)" :key="sub.id" @click="setId(sub)">
-                                                    <a href="courses-details.html">{{sub.course_name}}</a>
+                                                <li v-for="sub in searchProductToDisplay(cat.name)" :key="sub.id" @click="setId(sub)" v-html="link(sub)">
                                                 </li>
                                                 <!-- <li><a href="blog-left-sidebar.html">Instrumentation</a></li>
                                                 <li><a href="blog-right-sidebar.html">Internet of things</a></li> -->
@@ -428,7 +427,7 @@
                 <div class="courses-tabs-menu courses-active">
                     <div class="swiper-container">
                         <ul class="swiper-wrapper nav">
-                            <li class="swiper-slide" v-for="category in categories" :key="category.id" @click="search(category)"><button :class="[category.id == 1 ? 'active' : '']" data-bs-toggle="tab" :data-bs-target="`#demo${category.id}`">{{category.name}}</button></li>
+                            <li class="swiper-slide" v-for="category in categories" :key="category.id"><button @click="search(category)" :class="[category.id == 1 ? 'active' : '']" data-bs-toggle="tab" :data-bs-target="`#demo${category.id}`">{{category.name}}</button></li>
                             <!-- <li class="swiper-slide"><button data-bs-toggle="tab" :data-bs-target="`#demo${index}`">Programming</button></li>
                 <li class="swiper-slide"><button data-bs-toggle="tab" data-bs-target="#tabs3">Data Science</button></li>
                 <li class="swiper-slide"><button data-bs-toggle="tab" data-bs-target="#tabs4">Cyber Security</button></li>
@@ -461,8 +460,9 @@
                                 <div class="col-lg-4 col-md-6  col-container_" data-aos="fade-up" v-for="course in courses" :key="course.id" @click="setId(course)">
                                     <!---Single Courses Start -->
                                     <div class="single-courses col_">
-                                        <div class="courses-images">
-                                            <a href="courses-details.html "><img :src="course.course_img" alt="Courses"></a>
+                                        <div class="courses-images" @click="linkTo(course)">
+                                            <a href="#"><img :src="course.course_img" alt="Courses">
+                                            </a>
                                         </div>
                                         <div class="courses-content">
                                             <div class="courses-author">
@@ -479,7 +479,7 @@
                                                 </div>
                                             </div>
 
-                                            <h4 class="title "><a href="courses-details.html ">{{course.course_name}}</a></h4>
+                                            <h4 class="title " v-html="link(course)">=</h4>
                                             <div class="courses-price-review ">
                                                 <div class="courses-price ">
                                                     <!--                                                    <span class="sale-parice ">${{course.course_sales_price}}</span>-->
@@ -953,12 +953,18 @@
                 spinner: false,
                 categories: [],
                 courses: [],
+                host: location.origin,
                 original_courses: []
             },
             methods: {
+                linkTo(course) {
+                    location.assign(`${this.host}/courses-details.html?${course.slug}`)
+                },
+                link(value) {
+                    return `<a href="/courses-details.html?${value.slug}">${value.course_name}</a>`
+                },
                 searchProductToDisplay(value) {
                     let found = this.original_courses.filter(course => course.course_category == value)
-                    console.log(found)
                     return found
                 },
                 search(value) {

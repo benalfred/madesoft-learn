@@ -152,8 +152,7 @@
                                             <li v-for="cat in categories" :key="cat.id">
                                                 <a href="#">{{cat.name}}</a>
                                                 <ul class="sub-menu" v-if="searchProductToDisplay(cat.name).length">
-                                                    <li v-for="sub in searchProductToDisplay(cat.name)" :key="sub.id" @click="setId(sub)">
-                                                        <a href="courses-details.html">{{sub.course_name}}</a>
+                                                    <li v-for="sub in searchProductToDisplay(cat.name)" :key="sub.id" @click="setId(sub)" v-html="link(sub)">
                                                     </li>
                                                     <!-- <li><a href="blog-left-sidebar.html">Instrumentation</a></li>
                                                     <li><a href="blog-right-sidebar.html">Internet of things</a></li> -->
@@ -1221,6 +1220,9 @@
                 original_courses: []
             },
             methods: {
+                link(value) {
+                    return `<a href="/courses-details.html?${value.slug}">${value.course_name}</a>`
+                },
                 searchProductToDisplay(value) {
                     let found = this.original_courses.filter(course => course.course_category == value)
                     return found
