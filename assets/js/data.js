@@ -10,6 +10,11 @@ let courses = [
         course_name: 'Full Stack Industrial Automation & PLCs Programming',
         course_time: '5 months',
         course_lectures: '6',
+        tuition:
+            {
+                price: 450000
+            },
+
         structure: [{
                 topic: '3 Months Intensive Lessons',
                 text: 'This Program Consist of Online Virtual Classes, modularised lessons managed by Learning Management System with assignments, downloadable study materials and video lectures to fully engage the student on weekly basis.\n' +
@@ -45,10 +50,10 @@ let courses = [
 
     {
         id: 2,
-        course_img: 'assets/images/web programming.png',
+        course_img: 'assets/images/Industrial Control Communication.png',
         slug: 'A002',
         author_name: 'Williams Jason',
-        author_image: 'assets/images/web programming.png',
+        author_image: 'assets/images/Industrial Control Communication.png',
         course_category: 'Industrial Automation',
         course_name: 'Industrial Control Communication, Protocols & Networks',
         course_time: '7 weeks',
@@ -202,10 +207,10 @@ let courses = [
         level: 'Secondary'
     }, {
         id: 6,
-        course_img: 'assets/images/courses/courses-03.jpg',
+        course_img: 'assets/images/backend developent.png',
         author_name: 'Mrs Imade',
         slug: 'A005',
-        author_image: 'assets/images/author/author-03.jpg',
+        author_image: 'assets/images/backend developent.png',
         course_category: 'Programming',
         course_name: 'Backend Development',
         course_time: '6 months',
@@ -329,9 +334,9 @@ let courses = [
     // },
     {
         id: 10,
-        course_img: 'assets/images/courses/courses-03.jpg',
+        course_img: 'assets/images/frontend development.png',
         author_name: 'Williams Jason',
-        author_image: 'assets/images/author/author-03.jpg',
+        author_image: 'assets/images/frontend development.png',
         course_category: 'Programming',
         slug: 'A007',
         course_name: 'Frontend Development',
@@ -387,10 +392,10 @@ let courses = [
     // },
     {
         id: 12,
-        course_img: 'assets/images/iot development.png',
+        course_img: 'assets/images/iot embedded systems.png',
         author_name: 'Olu Head',
         slug: 'A008',
-        author_image: 'assets/images/iot development.png',
+        author_image: 'assets/images/iot embedded systems.png',
         course_category: 'Industrial Automation',
         course_name: 'Fullstack Iot & Embedded System Development',
         course_time: '6 months',
@@ -428,10 +433,10 @@ let courses = [
         level: 'Secondary'
     }, {
         id: 13,
-        course_img: 'assets/images/process control instrumentation.png',
+        course_img: 'assets/images/process control measurement and instrumentation.png',
         author_name: 'Williams Jason',
         slug: 'A009',
-        author_image: 'assets/images/process control instrumentation.png',
+        author_image: 'assets/images/process control measurement and instrumentation.png',
         course_category: 'Industrial Automation',
         course_name: 'Process Control, Measurement And Instrumentation',
         course_time: '5 months',

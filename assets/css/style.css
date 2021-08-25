@@ -18393,7 +18393,8 @@ only screen and (max-width: 575px) {
 /*----------------------------------------*/
 
 .slider-section {
-    background-color: #f9edee;
+    /*background-color: #f9edee; */
+    background-color: #f2f8fa;
     height: 940px;
     position: relative;
     overflow: hidden;
@@ -19892,7 +19893,6 @@ only screen and (max-width: 767px) {
 .single-work .work-icon i {
     width: 65px;
     height: 65px;
-    line-height: 68px;
     text-align: center;
     border: 1px solid rgba(48, 146, 85, 0.2);
     border-radius: 10px;
@@ -19903,6 +19903,9 @@ only screen and (max-width: 767px) {
     -webkit-transition: all 0.3s ease 0s;
     -o-transition: all 0.3s ease 0s;
     transition: all 0.3s ease 0s;
+}
+.single-work .work-icon img{
+    background: white;
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
@@ -20198,6 +20201,7 @@ only screen and (max-width: 767px) {
 .single-testimonial {
     text-align: center;
     border: 1px solid rgba(48, 146, 85, 0.2);
+    /*box-shadow: 0px 10px 30px 0px rgb(0 0 0 / 10%)!important;*/
     border-radius: 10px;
     padding: 45px 45px 40px;
     position: relative;
