@@ -539,8 +539,9 @@
                                                 <h3 class="tab-title mb-4 mt-5">Tuition:</h3>
 
                                                 <div class=" swipe_ col-md-12 p-5 mb-5" style="border-radius: 5px!important;">
-                                                    <div>
-                                                        This program has a total cost of <span style="background: red; color: white">₦{{course.tuition.price}}</span>. Prior to the start of the course, fees must be paid. If necessary, payments can be paid in installments.
+                                                    <div v-if="course.tuition">
+                                                        This program has a total cost of <span style="background: red; color: white">₦{{course.tuition.price.toString()
+                                                            .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}}</span> Prior to the start of the course, fees must be paid. If necessary, payments can be paid in installments.
                                                         For more information, please contact admin@madesoftacademy.com.
                                                     </div>
                                                 </div>
@@ -978,6 +979,7 @@
                         word = word.replace("?", "")
                         let found = this.original_courses.find(cours => cours.slug == word)
                         found ? this.course = found : location.assign(`${this.host}/programs.html`)
+                        console.log(found)
                         return
                     } else if (course && !location.search) {
                         return location.assign(`${this.host}/programs.html`)

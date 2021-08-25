@@ -64,6 +64,10 @@ let courses = [
         course_rating: 4.9,
         certificate: 'yes',
         language: 'English',
+        tuition:
+            {
+                price: 110000
+            },
         structure: [{
             topic: '4 Weeks Intensive Lessons',
             text: 'This Program Consist of Online Virtual Classes, modularised lessons managed by Learning Management System with assignments, downloadable study materials and video lectures to fully engage the student on weekly basis.\n' +
@@ -103,6 +107,10 @@ let courses = [
         course_old_price: 600000,
         course_rating: 4.9,
         certificate: 'yes',
+        tuition:
+            {
+                price: 110000
+            },
         structure: [{
             topic: '4 Weeks Intensive Lessons',
             text: 'This Program Consist of Online Virtual Classes, modularised lessons managed by Learning Management System with assignments, downloadable study materials and video lectures to fully engage the student on weekly basis.\n' +
@@ -144,6 +152,10 @@ let courses = [
         course_lectures: '6',
         course_sales_price: 130000,
         course_old_price: 600.00,
+        tuition:
+            {
+                price: 130000
+            },
         structure: [{
                 topic: '6 Weeks Intensive Lessons',
                 text: 'This Program Consist of Online Virtual Classes, modularised lessons managed by Learning Management System with assignments, downloadable study materials and video lectures to fully engage the student on weekly basis.\n' +
@@ -187,6 +199,10 @@ let courses = [
         course_old_price: 600.00,
         course_rating: 4.9,
         certificate: 'yes',
+        tuition:
+            {
+                price: 400000
+            },
         structure: [{
             topic: '3 Months Intensive Lessons',
             text: 'This Program Consist of Online Virtual Classes, modularised lessons managed by Learning Management System with assignments, downloadable study materials and video lectures to fully engage the student on weekly basis.This Program Consist of Online Virtual Classes, modularised lessons managed by Learning Management System with assignments, downloadable study materials and video lectures to fully engage the student on weekly basis. ' +
@@ -227,6 +243,10 @@ let courses = [
         course_old_price: 600.00,
         course_rating: 4.9,
         certificate: 'yes',
+        tuition:
+            {
+                price: 250000
+            },
         structure: [{
             topic: 'Description',
             text: 'In this Course, you’ll begin with the front-end, move on to the back-end, then learn to connect the two. By the time you’re done, you’ll have the well-rounded skills needed to enter the job market.\n' +
@@ -296,6 +316,10 @@ let courses = [
         course_old_price: 600.00,
         course_rating: 4.9,
         certificate: 'yes',
+        tuition:
+            {
+                price: 400000
+            },
         structure: [{
                 topic: '3 Months Intensive Lessons',
                 text: 'This Program Consist of Online Virtual Classes, modularised lessons managed by Learning Management System with assignments, downloadable study materials and video lectures to fully engage the student on weekly basis.\n' +
@@ -355,6 +379,10 @@ let courses = [
         course_sales_price: 250000,
         course_old_price: 600.00,
         course_rating: 4.9,
+        tuition:
+            {
+                price: 250000
+            },
         structure: [{
                 topic: '3 Months Intensive Lessons',
                 text: 'This Program Consist of Online Virtual Classes, modularised lessons managed by Learning Management System with assignments, downloadable study materials and video lectures to fully engage the student on weekly basis.\n' +
@@ -416,6 +444,10 @@ let courses = [
         course_sales_price: 400000,
         course_old_price: 600.00,
         course_rating: 4.9,
+        tuition:
+            {
+                price: 400000
+            },
         structure: [{
                 topic: '3 Months Intensive Lessons',
                 text: 'This Program Consist of Online Virtual Classes, modularised lessons managed by Learning Management System with assignments, downloadable study materials and video lectures to fully engage the student on weekly basis.\n' +
@@ -461,6 +493,10 @@ let courses = [
         course_old_price: 600.00,
         course_rating: 4.9,
         certificate: 'yes',
+        tuition:
+            {
+                price: 130000
+            },
         structure: [{
                 topic: '3 Months Intensive Lessons',
                 text: 'This Program Consist of Online Virtual Classes, modularised lessons managed by Learning Management System with assignments, downloadable study materials and video lectures to fully engage the student on weekly basis.\n' +
